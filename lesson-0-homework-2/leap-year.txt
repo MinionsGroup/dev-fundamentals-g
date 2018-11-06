@@ -1,0 +1,11 @@
+
+************** Leap Year ************** 
+	input Year : 2018
+	
+	p = ( year mod 4 == 0) ? true: false
+	q = ( year mod 100  == 0) ? true: false
+	r = ( year mod 400 == 0) ? true: false
+
+	si ( q == true && ( (q != true) || (r == true) ))
+	por verdad 	"si es bisiesto"
+	por falso   "no es bisiesto"
