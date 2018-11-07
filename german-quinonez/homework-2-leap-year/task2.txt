@@ -1,0 +1,25 @@
+Dado Y verificar si es biciesto
+Inputs:
+
+Y=year
+
+Mathematic-logic Model:
+
+P^(¬Q V R)
+
+Algorithm:
+1- leer año Y
+2- p=es_divible(Y,400): booleano
+3- q=es_divible(Y,100): booleano
+4- r=es_divible(Y,4): booleano
+5- Si p^(¬q v r)==Verdad
+		mostrar "es  biciesto"
+   Sino 
+		mostrar" no es biciesto"
+
+es_divible(dividendo,divisor)
+1- cociente=dividendo/divisor
+2- residuo=dividendo-(cociente*divisor)
+3- Si residuo==0
+	retornar Verdad
+   else retornar Falso
