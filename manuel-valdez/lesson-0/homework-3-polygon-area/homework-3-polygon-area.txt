@@ -1,3 +1,20 @@
+Mathematical - logic model
+--------------------------
+The area for a regular polygon is determined by:
+	area = perimeter * apothem
+
+where the perimeter is determined by:
+	perimeter = number_of_sides * length_of_one_side
+
+and the apothem is determined by:
+	apothem = length_of_one_side / (2 * tan (alpha_angle/2))
+
+where alpha_angle is:
+	360º / number_of_sides
+
+Algorithm
+---------
+
 inputs: side, numberOfSides
 outpust: area
 
