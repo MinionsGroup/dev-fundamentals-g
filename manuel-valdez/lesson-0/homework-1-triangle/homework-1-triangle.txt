@@ -31,14 +31,14 @@ CalcArea(x1, y1, x2, y2):area
 1.- Leer x1, y1, x2, y2
 2.- Calcular distancia abscisa (x1, x2) 
 3.- Calcular distancia ordenada (y1, y2) 
-4.- Calcular área del rectangulo (b, a)
-5.- Mostrar área
+4.- Calcular area del rectangulo (b, a)
+5.- Mostrar area
 
 2.1.- CalcXDistance(x1, x2)
-absoluteValue( x1 – x2 )
+absoluteValue( x1-x2 )
 2.2.- CalcYDistance(y1, y2)
-absoluteValue( y1 – y2 )
+absoluteValue( y1-y2 )
 4.1.- CalcArea(b, a)
-	b *a
+	b * a
 5.1.- Show(a)
 print "area" + a
