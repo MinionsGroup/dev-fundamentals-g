@@ -1,0 +1,63 @@
+TAREA 3
+Calcular el área de un polígono regular dado la longitud del lado y el número de lados
+Modelo matemático-lógico
+
+Considerando un poligono regular(longitud de lados iguales) esta compuesto de triangulos equilateros
+a su vez la mitad de este corresponde a un triangulo rectangulo:
+
+a=apotema -> segmento que une el centro y el punto medio de cada lado del polígono
+l=longitud del lado 
+c=hipotenusa
+c=l
+b=l/2
+Mediante el teorema de Pitágoras
+              
+			  a^2+b^2=c^2
+
+Por lo tanto 
+              a=raiz cuadrada(c^2-b^2)
+
+El área de un polígono regular es:
+
+               A=(n*l*a)/2
+
+Donde:
+n=número de lados
+l=longitud del lado
+a=apotema
+
+
+Entrada:
+n=número de lados
+l=longitud del lados
+Salida: Área de polígono regular 
+Algoritmo
+    1. Leer n y l
+    2. Verificar caso según datos ingresados findCase(n,l)
+    3. Calcular b, b=l/2
+    4. Calcular c, c=l
+    5. Calcular a(apotema) calculateApothem(b,c)
+    6. Determinar el área del polígono calculatePolygonArea(n,l,apotema)
+    7. Mostrar resultado printPolygonArea(case,area)
+
+findCase(n,l)
+Si n>2 y l>0
+   case= 1
+Si no
+    case =2
+     Print “Ingrese número de lados mayor a 2 y longitud de lado mayor a 0” 
+
+calculateApothem(b,c)
+
+   apotema=raiz cuadrada(c^2-b^2)
+
+calculatePolygonArea(n,l,apotema)
+
+    Area=(n*l*a)/2
+
+printPolygonArea(case,area)
+si case =1
+   print “El área del polígono regular es:” área
+si case=2
+   print “Ingrese número de lados mayor a 2 y longitud de lado mayor a 0”
+   
