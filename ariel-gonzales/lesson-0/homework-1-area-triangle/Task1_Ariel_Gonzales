@@ -1,0 +1,48 @@
+Exercise:
+    With two points calculate the area of rectangle.
+
+Rectangle area:
+    Area = Width * Length
+    Inputs: P1 (X1, Y1); P2 (X2, Y2).
+	Where X1, Y1, X2 and Y2 € R.
+    Outputs: A positive number € R.
+
+Mathematic-logic Model:
+    Length = |X2 – X1|
+    Width = |Y2 – Y1|
+
+Conditions:
+    If X2 == X1 (Vertical) or If Y2 == Y1 (Horizontal)
+    Area of rectangle is 0? So, it is not possible to calculate the area of rectangle.
+
+Algorithm:
+	Rectangle_Area (P1, P2): A
+        1.	Read P1, P2
+        2.	Verify Condition (P_getX(P1), P_getX(P2), P_getY(P2), P_getY(P2))
+        3.	Calculate Length (P_getX(P1), P_getX(P2))
+        4.	Calculate Width (P_getY(P1), P_getY(P2)))
+        5.	Calculate Area (length, width)
+        6.	Show Area
+
+Condition (P1_getX, P2_getX, P1_getY, P2_getY): Valid or Invalid
+        1.	If P1_getX == P2_getX or P1_getY P2_getY
+        2.	Return: Invalid
+        3.	Else: Return: Valid
+
+P_getX(P): x
+        1.	Return: X
+
+P_getY(P): y
+        1.	Return: Y
+
+Length (P1_getX, P2_getX): length
+        1.	Return: Subtraction (P1_getX, P2_getX)
+
+Width (P1_getY, P2_getY): length
+        1.	Return: Subtraction (P1_getY, P2_getY)
+
+Subtraction (n1, n2): substraction_result
+        1.	Return: |n1 – n2|
+
+Area (length, width): Area
+        1.	Return: length * width

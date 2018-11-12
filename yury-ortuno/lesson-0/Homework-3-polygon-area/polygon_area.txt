@@ -1,0 +1,26 @@
+/////////////////////////////////////////////////////////////////////////////////////////////
+///// Calculate area of regular polygon given a side length and the number of sides. ////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+Inputs
+    numberOfSides, sideLength
+Model mathematic-logic
+    Area = (numberOfSides * sideLength * apotema)/2
+    Apotema = sideLength/(2 * tan (alfa))
+    alfa = 360/(2 * numberOfSides)
+
+Algorithm
+1. Read sideLength, numberOfSides
+2. alfa = calculateAlfa(numberOfSides)
+3. apotema = calculateApotema(sideLength, alfa)
+4. areaPolygon = calculateArea(sideLength, numberOfSides, apotema)
+5. Show "The area of the polygon is: " + areaPolygon
+
+2.1. calculateAlfa(numberOfSides)
+        return 360/(2 * numberOfSides)
+
+3.1. calculateApotema(sideLength, alfa)
+        return sideLength/(2 * tan (alfa))
+
+4.1. calculateArea(sideLength, numberOfSides, apotema)
+        return (numberOfSides * sideLength * apotema)/2
