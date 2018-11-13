@@ -22,6 +22,6 @@ public class MainClass {
         myContactManager.addContact(fourthContact);
 
         Contact searchResult = myContactManager.searchContact("Jose");
-        System.out.println("Result: " + searchResult.getName());
+        System.out.println("Search result: " + searchResult.getName());
     }
 }
