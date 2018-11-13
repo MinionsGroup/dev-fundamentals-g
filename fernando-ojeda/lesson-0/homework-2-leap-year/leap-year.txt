@@ -1,0 +1,48 @@
+                                               Mathematic-logic Model
+p es divisible by 4
+q is not divisible by 100
+r is divisible by 400
+
+leapYear = 0                      p = 0, q = 0, r = 0
+leapYear = p ʌ ( ￢p ∨ r)         p, q, r > 0
+
+                                                    Algorithm
+verifyLeapYear(year): leapYear
+  1.	Leer year
+  2.	Determinar el caso, findCase(year): case
+  3.	Verificar si es año bisiesto, leapYear(year, case): leapYear
+  4.	Mostrar si es año bisiesto, showLeapYear(leapYear)
+
+findCase(year): case
+  1.	Si year == 0
+           case = 1
+  2.	Si year > 0
+           case = 2
+
+leapYear(year, case): leapYear
+  1.	Si case == 1
+           leapYear = 0
+  2.	Si case == 2
+           p = calculatorDivYear(year, 4)
+           q = calculatorDivYear(year, 100)
+           r = calculatorDivYear(year, 400)
+           leapYear = verifyLeapYear(p, q, r)
+
+calculatorDivYear(year, div): numbinary
+  1.	divYear = year / div
+  2.	resultDiv = divYear*div
+  3.	resultTotal = year – resultDiv
+
+verifyLeapYear(p, q, r): leapYear
+  1.    si p == 1 and q !=1 or r == 1
+           leapYear = 1
+  2.	sino
+           leapYear = 0
+
+show(year, leapYear)
+  1.	si leapYear == 0
+           print(“The year” + year + “is not a leap year”)
+  2.	si leapYear == 1
+           print(“The year” + year + “is a leap year”)
+
+
