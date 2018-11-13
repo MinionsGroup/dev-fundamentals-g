@@ -1,0 +1,26 @@
+#2 Hallar el area hexagono  dado n,p1,p2
+1. perimeterPolygon(n,p1,p2)
+                d = square root((x2-x1)^2-(y2-y1)^2)
+                permimeter = n*distanceBetweenP1ToP2(p1,p2)
+                
+                return permimeter
+                
+1.1 distanceBetweenP1ToP2(p1,p2)
+                                d = square root((x2-x1)^2-(y2-y1)^2)
+                                return d
+                                
+2. sideP1ToC(p1,p2)
+                sidep1-c = distanceBetweenP1ToP2(p1,p2)/2
+                return sidep1-c
+                
+3. angleForApotema(n)
+                angle = 360/6
+                angleApotema = angle/2
+                return angleApotema
+                
+4. apotemaPolygon(n,p1,p2)
+                apotema = (sideP1ToC(p1,p2) /tang(angleForApotema(n)) )
+                return apotema
+
+5. areaPolygon(n,p1,p2)
+                area = (apotemaPolygon(n,p1,p2)* perimeterPolygon(n,p1,p2))/2
