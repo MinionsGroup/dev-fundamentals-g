@@ -1,0 +1,18 @@
+************ Culcular el are de un poligono regular ************ 
+
+ ** Formula para Obtener Are de a poligono regular
+
+A = (P * a) / 2
+
+ ** Formula para obtener el Perimetro
+
+P = n * i
+
+P = perimetro
+n= numero de lados
+i= medida del lado
+
+**Formula para obtener Apotema.
+
+h^2 = a^2  +  b^2
+
