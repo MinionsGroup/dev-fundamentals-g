@@ -1,4 +1,4 @@
-public class MainContact {
+public class MainContact{
     public static void main(String[] args) {
         // Create the ContactsManager object
         ContactsManager myContactsManager = new ContactsManager();
