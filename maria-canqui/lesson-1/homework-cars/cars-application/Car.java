@@ -1,4 +1,3 @@
-import java.util.Random;
 public class Car {
     private double distance;
     private double gasoline;
