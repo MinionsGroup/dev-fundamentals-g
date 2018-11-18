@@ -1,0 +1,10 @@
+The guess number is bigger than your number
+27
+The guess number is bigger than your number
+28
+The guess number is bigger than your number
+88
+The guess number is less than your number
+88
+The guess number is less than your number
+You don´t have more attempts
