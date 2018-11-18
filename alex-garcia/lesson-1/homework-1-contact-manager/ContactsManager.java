@@ -16,8 +16,8 @@ class ContactsManager {
     }
 
     // Methods:
-    void addContact(Contact Contact){
-        myFriends[friendsCount] = Contact;
+    void addContact(Contact contact){
+        myFriends[friendsCount] = contact;
         friendsCount++;
     }
 
