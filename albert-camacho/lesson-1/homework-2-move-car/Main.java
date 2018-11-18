@@ -1,21 +1,39 @@
+import java.util.Random;
+
 public class Main {
-    public static void main(String arg[]){
-        Car toyota = new Car("Toyota 2005", 50, 21);
+    public static void main (String arg[]) {
+        int numCars = 3;
 
-        Car suzuki = new Car("Suzuki 2015", 65, 30.12);
+        // All cars will travel the same distance
+        double distance = getRandomNumberInRange(1500, 3000);
+        System.out.println("Status of all Cars if the distance is: " + distance + " Kms");
+        System.out.println("-----------------------------------------------------\n");
 
-        Car volkswagen = new Car("Volkswagen 2009", 55, 25.65);
+        for (int i = 1; i <= numCars; i++) {
+            double tankCapacity = getRandomNumberInRange(50, 119.5);
+            double gasConsume = getRandomNumberInRange(21.5, 32.1);
 
-        CarManager manager = new CarManager();
-        manager.addCar(toyota);
-        manager.addCar(suzuki);
-        manager.addCar(volkswagen);
+            Car car = new Car(tankCapacity,gasConsume);
+            car.fillTank(tankCapacity);
+            car.move(distance);
 
-        manager.moveAllCars(2819.50);
+            car.printStatus();
+            System.out.println("-----------------------------------------------------");
+        }
+    }
 
-        manager.printLastPerformanceComparision();
+    // Util method to get a random number between two doubles
+    private static double getRandomNumberInRange(double min, double max) {
 
-        manager.printStatusAllCars();
+        if (min >= max) {
+            throw new IllegalArgumentException("max must be greater than min");
+        }
 
+        Random r = new Random();
+        double number = min + (max - min) * r.nextDouble();
+
+        // Round the value to two digits after the comma
+        double scale = Math.pow(10, 2);
+        return Math.round(number * scale) / scale;
     }
 }

@@ -1,96 +1,90 @@
 
 public class Car {
-    private String model;
-    private double gas = 0;
-    private boolean isPowerOn = false;
+    private double gas;
+    private double distance;
+    private boolean isPowerOn;
 
-    // How many kilometers the car has been moved
-    private double lastDistance;
-    private double odometerReader;
+    // How many Kilometers per liter
+    private double gasConsume;
 
-    // Liter as measurement unit
     private double tankCapacity;
 
-    // How many kilometers per 1 liter
-    private double kilometersPerLiter;
-
-    public Car(String model, double tankCapacity, double kilometersPerLiter){
-        this.model = model;
+    public Car(double tankCapacity, double gasConsume) {
+        this.gas = 0;
+        this.distance = 0;
+        this.isPowerOn = false;
         this.tankCapacity = tankCapacity;
-        this.kilometersPerLiter = kilometersPerLiter;
-        this.odometerReader = 0;
+        this.gasConsume = gasConsume;
     }
 
-    public String getModel(){
-        return model;
-    }
-
-    public void powerOn(){
+    public void powerOn() {
         isPowerOn = true;
     }
 
-    public void powerOff(){
+    public void powerOff() {
         isPowerOn = false;
     }
 
-    public boolean getIsPowerOn(){
+    public double getGas() {
+        return round(gas);
+    }
+
+    public double getDistance(){
+        return round(distance);
+    }
+
+    public void fillTank(double liters) {
+        double gasDifference = tankCapacity - gas;
+        if (liters <= gasDifference){
+            gas =+ liters;
+        } else if (gasDifference > 0 ) {
+            gas += gasDifference;
+            System.out.println("Alert: It was used only " + gasDifference + " of " + liters +
+                               " liters, the tank is full now.");
+        } else {
+            System.out.println("Alert: The car doesn't requires gas, the tank is full!!. ");
+        }
+    }
+
+    public void move(double distance) {
+        if (canMove()){
+            double distanceToMove = distanceToMove(distance);
+            this.distance += distanceToMove;
+            gas -= distanceToMove/gasConsume;
+        } else {
+            System.out.println("The car can't move because the tank is empty");
+        }
+    }
+
+    public void printStatus() {
+        String status = isPowerOn ? "Power On" : "Power Off";
+        String fmtText = "%-12s %-12s %-15s %-10s\n";
+
+        System.out.printf(fmtText,"STATUS:", status, "ODOMETER:", getDistance() + " km");
+        System.out.printf(fmtText,"GAS:", getGas() + " lts","TANK CAPACITY:", tankCapacity + " lts");
+        System.out.printf(fmtText,"GAS CONSUME:", gasConsume + " Km/lt"," ", "");
+    }
+
+    private boolean canMove() {
+        if (gas > 0){
+            powerOn();
+        } else {
+            powerOff();
+        }
         return isPowerOn;
     }
 
-    public double getTankCapacity(){
-        return tankCapacity;
-    }
-
-    public double getGas(){
-        double scale = Math.pow(10, 2);
-        return Math.round(gas * scale) / scale;
-    }
-
-    public double getLastDistance(){
-        return lastDistance;
-    }
-
-    public void fillFuelTank(double liters){
-        double missingGas = tankCapacity - gas;
-        if (liters <= missingGas){
-            gas =+ liters;
-        } else {
-            gas += missingGas;
-            // Log the wasted liters
-            double wasted = liters - missingGas;
-            System.out.println("Alert: Overflow the fuel and " + wasted +
-                               " liters were wasted when filling the tank.");
-        }
-    }
-
-    public void move(double distance){
-        if (isPowerOn && gas > 0){
-            lastDistance = canMove(distance);
-            odometerReader += lastDistance;
-            gas -= lastDistance/kilometersPerLiter;
-        }
-    }
-
-    /*
-     * Returns the distance the car can move based on how many gas there is
-     */
-    private double canMove(double distance){
-        double gasTobeConsumed = distance / kilometersPerLiter;
-        if(gasTobeConsumed > gas){
-            return gas * kilometersPerLiter;
+    private double distanceToMove(double distance) {
+        double gasToBeConsumed = distance / gasConsume;
+        if(gasToBeConsumed > gas) {
+            return gas * gasConsume;
         }
         return distance;
     }
 
-    public void printInformation(){
-        String status = isPowerOn ? "Power On" : "Power Off";
-        String fmtText = "%-15s %-20s %-30s %-10s\n";
-
-        System.out.printf(fmtText,"MODEL:", model, "STATUS:", status);
-        System.out.printf(fmtText, "ODOMETER:", odometerReader + " km",
-                          "DISTANCE AFTER LAST CHARGE:", lastDistance + " km");
-        System.out.printf(fmtText,"CURRENT GAS:", getGas() + " lts",
-                          "TANK CAPACITY:", tankCapacity + " lts");
+    // Round the value to two digits after the comma
+    private double round(double number) {
+        double scale = Math.pow(10, 2);
+        return Math.round(number * scale) / scale;
     }
-
 }
