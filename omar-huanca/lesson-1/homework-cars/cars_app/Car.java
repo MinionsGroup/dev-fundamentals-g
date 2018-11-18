@@ -9,6 +9,7 @@ import java.util.Random;
  * @version 1.0.
  */
 public class Car {
+
     private String name;
     private double distance;
     private double gasoline;
@@ -16,19 +17,16 @@ public class Car {
     private double gasConsume;
     private boolean isPowerOn;
 
-
     /**
      * Constructor for Car.
      * This method is for initialize contact attributes
      *
-     * @param name, This is a name of the car
      */
-    public Car(String name) {
-        this.name = name;
+    public Car() {
+        this.name = "";
         this.isPowerOn = false;
         this.distance = 0;
         this.gasoline = 0;
-
         // gasConsume with Random number between 1-3
         // with formula: nextInt((max - min) + 1) + min;
         this.gasConsume = new Random().nextInt(3) + 1;
@@ -102,6 +100,15 @@ public class Car {
     }
 
     /**
+     * This method is to set name of car
+     *
+     * @param name name of car
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
      * This method is to power on the car
      */
     public void powerOnTheCar() {
@@ -117,16 +124,6 @@ public class Car {
         this.setPowerOn(false);
     }
 
-    /**
-     * This method is to return if the car is able to charge gasoline
-     *
-     * @param gasoline double value of gasoline
-     * @return Boolean, True if the car is able to charge gasoline, False if not
-     */
-    private boolean isTankOfGasolineFull(double gasoline) {
-        return maxGasoline < this.gasoline + gasoline;
-
-    }
 
     /**
      * This method is to return actual gasoline according distance
