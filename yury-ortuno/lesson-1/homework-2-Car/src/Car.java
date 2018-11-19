@@ -40,11 +40,7 @@ public class Car {
     }
 
     public void fillGas(double gas) {
-        if (gas > maxCapacityGas) {
-            this.gas = maxCapacityGas;
-        } else {
-            this.gas = gas;
-        }
+        this.gas = gas;
     }
 
     public double totalRouteCar() {
