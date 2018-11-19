@@ -24,8 +24,11 @@ public class Car {
     }
 
     public void fillGas(double gas) {
-        if (this.gas + gas <= this.capacity)
+        if (this.gas + gas <= this.capacity) {
             this.gas += gas;
+        } else {
+            this.gas = capacity;
+        }
     }
 
     private double maxDistance() {
