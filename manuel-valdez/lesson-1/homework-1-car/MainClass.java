@@ -2,24 +2,34 @@ package lesson_1.exercise_1_contacts.homework_1_car;
 
 public class MainClass {
     public static void main(String[] args) {
-        Car celica = new Car(30, 100, 200);
-        Car mustang = new Car(50, 200, 150);
-        Car golf = new Car(70, 150, 250);
-        celica.powerOn();
+		DataLoader data = new DataLoader();
+		double distance = data.carDistance();		
+        Car celica = new Car(30, 100, distance);
+		
+		distance = data.carDistance();		
+        Car mustang = new Car(50, 200, distance);
+		
+		distance = data.carDistance();		
+        Car golf = new Car(70, 150, distance);
+        
+		celica.powerOn();
         mustang.powerOn();
         golf.powerOn();
 
         System.out.println("Celica car is powered on?: " + celica.isPowerOn());
         System.out.println("Mustang car is powered on?: " + mustang.isPowerOn());
         System.out.println("Golf car is powered on?: " + golf.isPowerOn());
+		
+		int amountOfGas = data.LoadGas();
+		
+        celica.fillGas(amountOfGas);
+        mustang.fillGas(amountOfGas);
+        golf.fillGas(amountOfGas);
 
-        celica.fillGas(15);
-        mustang.fillGas(15);
-        golf.fillGas(15);
-
-        celica.move(300);
-        mustang.move(300);
-        golf.move(300);
+		int distanceToMove = Integer.parseInt(args[0]);
+        celica.move(distanceToMove);
+        mustang.move(distanceToMove);
+        golf.move(distanceToMove);
 
         System.out.println("Celica amount of distance moved is: " + celica.getDistanceMoved() + ", and remaining gas amount is: " + celica.getGas());
         System.out.println("Mustang amount of distance moved is: " + mustang.getDistanceMoved() + ", and remaining gas amount is: " + mustang.getGas());
