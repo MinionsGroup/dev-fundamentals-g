@@ -39,11 +39,15 @@ public class Auto {
         if(powerOn) {
             double consumeGas = this.performance * distancia;
             if (consumeGas > gas) {
-                System.out.println("It is not possible to continue, gas is not enough ");
+                double distance = consumeGas/this.performance;
+                gas = 0;
+                this.kilometraje += distance;
+                System.out.println("You can continue only  " +  distance + " km more");
             } else {
                 gas -= consumeGas;
                 this.kilometraje += distancia;
             }
+            System.out.println("you have traveled by car" +  this.kilometraje + " km");
         }
         else
         {
