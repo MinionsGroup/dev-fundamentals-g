@@ -33,9 +33,11 @@ public class Car {
     }
 
     public void move(double distance) {
-        this.distance = maxDistance();
-        if (distance < this.distance) {
-            this.distance = distance;
+        double maxDistance = maxDistance();
+        if (distance <= maxDistance) {
+            this.distance += distance;
+        } else {
+            this.distance += maxDistance;
         }
         this.gas -= this.distance / this.gasConsume;
     }
