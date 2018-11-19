@@ -1,0 +1,28 @@
+poligono
+Analisis matematico
+area=perimetro*apotema/2
+perimetro= L*Nrolados
+AC=L/2
+alfa=360/Nrolados
+ap= (AC)/tang(alfa/2)
+calculatorArea(L, N): area
+1.	Leer L, Nrolados
+2.	Determinar el caso, findCase(L, Nrolados): casos
+3.	Calcular el área, calcArea(L, Nrolados, case): area
+4.	Mostrar área, showArea(area)
+ findCase(L, N): case
+  1.	Si L==0 or N==0
+            case = 1
+  2.	Si L>0 and Nrolados>0
+            case = 2
+ calcArea(L, N, case): área
+  1.	Si case ==1
+           area = 0
+  2.	Si case ==2
+           α= 360/N
+           ap = calcAp(L, alfa)
+           area = perimetro*ap/2
+ calcAp(L, alfa): ap
+  1.	ap = AC/tang(alfa/2)
+ showArea(area)
+  1.	print(“The área of the polygon is:” + area)

@@ -1,0 +1,35 @@
+Leap year
+
+Inputs
+p, q, r
+
+Model mathematic-logic
+p is divisible by 4
+q is not divisible by 100
+r is divisible by 400
+where p, q and r are the year
+
+p ^ (~q v r)
+
+Algorithm
+
+1. Read year
+2. isLeap(year)
+
+
+isLeap(year)
+1. Si moduleFunction(year, 400) == 0
+	Show "Is leap" 
+   Sino
+	Si moduleFunction(year, 4) == 0 and moduleFunction(year, 100) != 0
+		Show "Is leap"
+   Sino
+	Show "Is not leap"
+
+
+moduleFunction(year, moduleNumber)
+1. return year - (moduleNumber * (year / moduleNumber))
+
+
+Direct way
+return moduleFunction(year, 4) == 0 && moduleFunction(year, 100) != 0 || moduleFunction(year, 400) == 0

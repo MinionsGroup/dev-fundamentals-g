@@ -1,0 +1,24 @@
+Inputs:
+
+Y=año para verificar si es biciesto
+
+Mathematic-logic Model:
+
+P^(¬Q V R)
+
+Algorithm:
+1- leer Y
+2- verificar modulo(Y,400):R
+3- verificar modulo(Y,100):Q
+4- verificar modulo(Y,4):P
+5- If P^(¬Q V R)==True
+	mostrar "es año biciesto"
+   else mostrar"el año no es biciesto"
+
+modulo(Y,divisor)
+1- cociente=Y/div
+2- resto=Y-(cociente*div)
+3- If resto==0
+	return True
+   else return False
+

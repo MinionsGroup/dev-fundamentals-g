@@ -1,0 +1,39 @@
+Calculate the area of a regular polygon knowing the length of every side and the numbers of side. 
+
+Mathematical model 
+A = (S*n) * a /2
+
+a= S /(2 tan (180/n)) 
+ 
+Where: 
+S= side of length 
+n= number of sides 
+ 
+Algorithm 
+
+Input(sideLenght, nroSides): isCorrect 
+If(isCorrect) 
+	calculatePerimeter(sideLenght, nroSides):perimeter 
+	calculateApothem(sideLenght, nroSides):apothem 
+	calculateArea(perimeter, apothem):area 
+	print “The area is “+ area” 
+else: 
+ 	print “One of the parameters is not correct.” 
+ 
+Input(sideLenght, nrodSides): isCorrect 
+ 	isCorrect=false 
+	If (sideLenght > 0 and nroSides>2) 
+		 isCorrect = true 
+
+calculatePerimeter(S,n):perimeter 
+	 perimeter=S*n 
+ 
+calculateApothem(S, n):apothem 
+	 apothem=0 
+	 auxiliar=calculateTan(180/n) 
+	 apothem= S / 2*auxiliar 
+ 
+calculateArea(perimeter, apothem):area 
+ 	area = perimeter * apothem 
+	area = area / 2  
+ 

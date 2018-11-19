@@ -1,0 +1,32 @@
+                                       Mathematic-logic Model
+
+
+area = 0                  L = 0  or  N = 0
+area = N*L*ap/2           L > 0 and N > 0
+
+                                             Algorithm
+calculatorArea(L, N): area
+1.	Leer L, N
+2.	Determinar el caso, findCase(L, N): case
+3.	Calcular el área, calcArea(L, N, case): área
+4.	Mostrar área, showArea(area)
+
+findCase(L, N): case
+  1.	Si L==0 or N==0
+            case = 1
+  2.	Si L>0 and N>0
+            case = 2
+
+calcArea(L, N, case): área
+  1.	Si case ==1
+           area = 0
+  2.	Si case ==2
+           α= 360/N
+           ap = calcAp(L, α)
+           area = N*L*ap/2
+
+calcAp(L, α): ap
+  1.	ap = L/2+tg(α/2)
+
+showArea(area)
+  1.	print(“The área of the polygon is:” + area)

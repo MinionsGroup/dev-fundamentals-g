@@ -1,0 +1,25 @@
+Inputs 
+P1(X1, Y1)
+P2(X2, Y2)
+Output 
+Triangle rectangle area
+
+Model mathematic-logic
+Triangle rectangle area =|P1P2|=(base*height)/2
+Base = x2 – x1
+Height = y2 – y1
+Triangle rectangle area = |P1P2| = ((x2 – x1) * (y2 – y1)) / 2
+
+Algorithm
+1.	Read P1
+2.	Read X1, Y1
+3.	Read P2
+4.	Read X2, Y2
+5.	Perform absolute value of P1P2 ->|P1P2|
+6.	calcArea(x1, Y1, X2, Y2)
+7.	show area.
+
+Auxiliar method
+calcArea(x1, Y1, X2, Y2)
+area = ((x2 – x1) * (y2 – y1)) / 2
+return area
