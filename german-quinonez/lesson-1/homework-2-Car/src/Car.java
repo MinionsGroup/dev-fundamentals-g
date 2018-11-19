@@ -69,10 +69,10 @@ public class Car {
         return gas;
     }
 
-    public int comparePerformance(Car car) {
-        return (this.distance < car.distance) ? 1 :
-                (this.gas < car.gas) ? 1 :
-                        (this.gasConsume < car.gasConsume) ? 1 : 0;
+    public boolean comparePerformance(Car car) {
+        return (this.travel() < car.travel()) ? true :
+                (this.getGas() < car.getGas()) ? true :
+                        (this.getGasConsume() < car.getGasConsume()) ? true : false;
     }
 }
 
