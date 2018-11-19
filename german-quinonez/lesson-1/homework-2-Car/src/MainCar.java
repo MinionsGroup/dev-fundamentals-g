@@ -28,11 +28,11 @@ public class MainCar {
         car3.move(distance);
         System.out.println(distance);
 
-        if (car1.comparePerformance(car2) > 0 && car1.comparePerformance(car3) > 0) {
+        if (car1.comparePerformance(car2) && car1.comparePerformance(car3)) {
 
             System.out.println("car 1 won");
 
-        } else if (car2.comparePerformance(car1) > 0 && car2.comparePerformance(car3) > 0) {
+        } else if (car2.comparePerformance(car1) && car2.comparePerformance(car3)) {
 
             System.out.println("car 2 won");
 
@@ -42,6 +42,5 @@ public class MainCar {
 
         }
     }
-
 
 }
