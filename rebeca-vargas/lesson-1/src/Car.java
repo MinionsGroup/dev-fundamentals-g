@@ -19,6 +19,7 @@ public class Car {
 
     }
 
+    //test
     public double getGas() {
         return gas;
     }
