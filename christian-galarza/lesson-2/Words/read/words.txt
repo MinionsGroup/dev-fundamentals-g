@@ -1,0 +1,56 @@
+How Gaia will map the galaxy one star at a time
+
+The astronomy community is preparing for a big one: a spectacular, 3D map of the entire Milky Way.
+
+Astronomy is often called the oldest branch of science. Since ancient times, humans have stared at the sky,
+ cataloged its residents, marked new arrivals, and charted the constant stars and wandering planets.
+
+Over millennia, huge advances have been made in astronomy, but some surprisingly basic questions remain:
+ Where exactly are the stars? Where, in the grand scheme of things, is Earth? What is the shape and
+ structure of our home galaxy?
+
+We’ve come a long way from thinking of the stars as a two-dimensional projection on the sky, but measuring
+a star’s distance remains quite tricky. And even tracking a star’s motion across the sky in two dimensions
+ is difficult without years of data.
+
+In 1989, the European Space Agency (ESA) launched the Hipparcos satellite to measure the positions
+of 2.5 million stars, a catalog that wasn’t released in full until 2000. In 2013, ESA launched Gaia,
+which will return even higher-precision data on over a billion stars. Gaia was a Greek goddess who was
+ regarded as a sort of Mother Earth. The ESA mission originally stood for “Global Astrometric
+ Interferometer for Astrophysics.” Though many of the parameters changed, ESA kept the name for
+ mission continuity.
+
+Gaia won’t complete its mission until 2019, and the final data analysis won’t be available until years
+afterward. But in September 2015, the Gaia science team released a first round of data from 14 months
+of observing, and welcomed scientists around the globe to jump in. The results are already changing
+astronomers’ perspective of our galaxy.
+By the numbers
+Gaia’s mission statement is to “map a billion stars,” but even this bold promise undersells the space
+observatory’s true abilities. Gaia, orbiting around 932,000 miles (1.5 million kilometers) away and
+mapping the whole sky, carries three instruments. Its astrometric instrument charts positions and motions
+of stars with pinpoint precision by observing how they appear to move over the course of Gaia’s five-year
+mission. Its photometric camera measures the brightness of stars at both red and blue wavelengths, producing
+ data about their temperatures and compositions. Finally, the spectrometer measures the Doppler shift
+  of particular chemical signatures to reveal whether stars are moving toward or away from Earth.
+  (For an in-depth overview of Gaia’s design and mission, check out Astronomy’s December 2014 story,
+   “How Gaia will map a billion stars.”)
+
+Eventually, Gaia’s goal is to plot the distance of 100 million stars to better than 10 percent accuracy.
+ For 10 million objects, its margin of error will be less than 1 percent. It will measure the positions
+ and motions of more than 1 billion stars across the whole sky, down to 20th magnitude, with an accuracy
+  of a few millionths of an arcsecond, crushing previous surveys.
+
+For this first data release, though, Gaia needed some help. Gaia measures the motions of stars to
+determine their distance. From only the first year of data, it’s impossible to untangle the motion
+of the stars from the telescope’s own motion as it follows Earth’s orbit around the Sun. But the
+Hipparcos satellite has already done this work once, for millions of Gaia’s target stars.
+ The Hipparcos catalog knows where these stars were 20 years ago, and Gaia knows where they
+ are now, to even better precision. That extended timeline was just what Gaia needed.
+
+So the Gaia team combined the final Hipparcos catalog, called Hipparcos-Tycho 2, with Gaia’s
+data thus far. The Tycho-Gaia Astrometric Solution (TGAS) is the first step in an updated map
+that will eventually contain a star’s position in 3-D, plus its motion, more accurately than
+ever before. For now, it contains 2 million stars, measured twice as precisely as by Hipparcos
+alone. By the end of Gaia’s mission, the Hipparcos data will be superseded by Gaia’s more precise
+ measurements. But in the meantime, Hipparcos — and a few other surprising sources — are lending
+  Gaia a helping hand.
