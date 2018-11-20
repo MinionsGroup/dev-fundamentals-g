@@ -1,0 +1,53 @@
+/*/*/*/*/*/*/*/*/*
+mathematic logic model
+LeapYearForm
+p˄(⌐q˅r)
+p is divisible by 4
+q is divisible by 100
+r is divisible by 400
+/*/*/*/*/
+Algorithm
+LeapYear(year):isItALeapYear
+	1 Read year
+	2 Verify that year divided by 4 is an integer, VerifyThatYearIsDividedBy4(year):isItDividedBy4
+	3 Verify that year divided by 100 is an integer, VerifyThatYearIsDividedBy100(year):isItDividedBy100
+	4 Verify that year divided by 400 is an integer, VerifyThatYearIsDividedBy400(year):isItDividedBy400
+	5 Verify in the LeapYearForm, LeapYearForm(isItDividedBy4, isItDividedBy100, isItDividedBy400):isItALeapYear
+	6 Show Leap Year, Show(isItALeapYear)
+	
+ResidueOfAYear(year,number):resultOfASubtraction
+	1 Integer DivResult
+	2 DivResult = year/number
+	3 resultOfASubtraction = year-(DivResult*number)
+	
+VerifyThatYearIsDividedBy4(year):isItDividedBy4
+	1 If ResidueOfAYear(year,4) == 0
+		1.1 isItDividedBy4 = true
+	2 Else
+		2.2 isItDividedBy4 = false
+		
+VerifyThatYearIsDividedBy100(year):isItDividedBy100
+	1 If ResidueOfAYear(year,100) == 0
+		1.1 isItDividedBy100 = true
+	2 Else
+		2.2 isItDividedBy100 = false
+
+VerifyThatYearIsDividedBy400(year):isItDividedBy400
+	1 If ResidueOfAYear(year,400) == 0
+		1.1 isItDividedBy400 = true
+	2 Else
+		2.2 isItDividedBy400 = false
+
+LeapYearForm(isItDividedBy4, isItDividedBy100, isItDividedBy400):isItALeapYear
+	1 If isItDividedBy4 And ((~isItDividedBy100) Or isItDividedBy400)
+		1.1 isItALeapYear = true
+	2 Else
+		2.2 isItALeapYear = false
+
+Show(isItALeapYear)
+	1 If isItALeapYear == true
+		1.1 print "It is a LeapYear"
+		1.2 End
+	2 Else
+		2.1 print "It is not a LeapYear"
+		2.2 End

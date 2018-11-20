@@ -1,0 +1,42 @@
+Exercise:
+    Verify if it is a Leap year.
+
+Leap Year Condition:
+    Leap_Year = p && (!q || r)
+    Where:
+    •	p = divisible by 4
+    •	!q = divisible by 100
+    •	r = divisible by 400
+    Inputs: Year.
+	    Where Year € positive N.
+    Outputs: True, if it is a leap year or False, if it is not a leap year.
+
+Algorithm:
+	Is_Leap_Year (year): True or False
+        1.	Read year
+        2.	p = Is_Divisible(year,4): True or False
+        3.	q = Is_Divisible (year,100): True or False
+        4.	r = Is_Divisible (year,400): True or False
+        5.	leap = Verify_Condition (p, q, r): True or False
+        6.	Show is_leap (leap)
+
+Is_Divisible (num1, num2): True or False
+        1.	if (year < num)
+            a.	Return False
+        2.	div = num1/num2
+        3.	if (num 1 == (div*num))
+            a.	Return True
+        4.	Else
+            a.	Return False
+
+Verify_Condition (p, q, r): True or False
+        1.	q = negar(q)
+        2.	If (p == False)
+            a.	Return False
+        3.	If (q == true || r == true)
+            a.	Return True
+        4.	Else
+            a.	Return False
+
+negar(q):
+	return (q * False)

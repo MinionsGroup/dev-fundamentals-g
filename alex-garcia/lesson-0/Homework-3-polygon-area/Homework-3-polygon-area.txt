@@ -1,0 +1,39 @@
+AREA DE UN POLIGONO DADA LA LOGITUD DE UNO DE SUS LADOS Y EL NUMERO DE LADOS
+****************************************************************************
+MODELO MATEMATICO
+******************
+Area_poligono = Numero_Lados [(Longitud * apotema)/2]
+
+apotema = Longitud /[2 tan(@)]
+
+@ = 360 /(2 * Numero_Lados)
+
+ALGORITMO
+**********
+input: 
+	Longitud
+	Numero_Lados
+	
+output:
+	Area_poligono
+	
+
+	
+Leer:
+	Longitud
+	Numero_Lados
+
+angulo = 360 /(2 * Numero_Lados)
+
+apotema = Longitud /[2 tan(angulo)]
+
+Area_Triangulo = (Longitud * apotema)/2
+
+Area_poligono = Numero_Lados * Area_Triangulo
+
+print "El area del poligo no es: " + Area_poligono 
+
+
+
+
+

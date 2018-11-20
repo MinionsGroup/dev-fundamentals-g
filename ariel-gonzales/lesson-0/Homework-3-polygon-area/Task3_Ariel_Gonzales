@@ -1,0 +1,47 @@
+Exercise:
+    Calculate the regular polygon area with a side length and sides numbers.
+
+Regular Polygon Area:
+    Area = side_numbers * ((base* height)/2)
+    Inputs: side length; side numbers.
+	Where side_length and side_numbers € positive R.
+    Outputs: A positive number € R.
+
+Mathematic-logic Model:
+	Calculate Apotema:
+        a = (s/(2*tan(180/(n))))
+    Where:
+	    a = apotema
+	    s = side
+	    n = side numbers
+
+Calculate Triangle Area:
+	Area = ((base* height)/2)
+    Where:
+	    base = side
+	    height = apotema
+
+Area of Regular Polygon:
+		Area = side_numbers * ((side* Apotema)/2)
+
+Conditions:
+	If side == 0 or side_numbers ==0
+    Area of regular polygon is 0? So, it is not possible to calculate the area of regular polygon.
+
+Algorithm:
+	1. Calculate_Polygon_Area (side, side_numbers): polygon_Area
+	2. Read side, side_numbers
+	3. Apotema = Calculate_Apotema (side, side_numbers): Apotema
+	4. Triangle_Area = Calculate_Triangle_Area (side, Apotema): Triangle_Area
+	5. Polygon_Area = Multiplication (side_numbers, Triangle_Area): polygon_Area
+	6. Show Area (Polygon_Area)
+
+Calculate_Apotema (side, side_numbers): Apotema
+	1. Return (side/(2*tan(180/(side_numbers))))
+
+Calculate_Triangle_Area (side, Apotema): Triangle_Area
+	1. Return ((side*Apotema)/2))
+
+Multiplication (num1, num2): polygon_Area
+	1. Return (num1 * num2)
+
