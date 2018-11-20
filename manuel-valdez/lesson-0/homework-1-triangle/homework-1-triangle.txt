@@ -1,0 +1,44 @@
+Minions - Tarea1
+Modelo matematico
+Area de un rectangulo:
+	base*altura
+Area de un triangulo:
+(base*altura)/2
+Teorema de Pitagoras:
+ c^2= a^2+b^2     ->    c=sqrt(a^2+b^2  )		
+Ecuacion de distancia entre dos puntos:
+	d=sqrt((x_2-x_1)^2 + (y_2-y_1)^2 )
+Ya que tenemos dos puntos, al obtener la distancie entre estos, tendremos la hipotenusa de un triangulo rectangulo, por lo que:
+c=d   ?   sqrt(a^2+b^2  )=   sqrt((x_2-x_1)^2 + (y_2-y_1)^2 )
+
+De esta ultima ecuacion se puede obtener que a y b son:
+a=x_2-x_1  
+b=y_2-y_1
+Pero debido a que los valores de los puntos pueden ser negativos por estar en el plano cartesiano, se aplica valor absoluto para obtener la altura y base del triangulo:
+
+a=| x_2-x_1 |
+b=| y_2-y_1 |
+El area de un triangulo, es la mitad del area de un rectangulo, por lo que:			
+((base*altura)*2)/2
+
+
+
+
+Algoritmo
+Inputs: P1, P2  -> (x1, y1, x2, y2)
+Output: area 
+CalcArea(x1, y1, x2, y2):area
+1.- Leer x1, y1, x2, y2
+2.- Calcular distancia abscisa (x1, x2) 
+3.- Calcular distancia ordenada (y1, y2) 
+4.- Calcular area del rectangulo (b, a)
+5.- Mostrar area
+
+2.1.- CalcXDistance(x1, x2)
+absoluteValue( x1-x2 )
+2.2.- CalcYDistance(y1, y2)
+absoluteValue( y1-y2 )
+4.1.- CalcArea(b, a)
+	b * a
+5.1.- Show(a)
+print "area" + a

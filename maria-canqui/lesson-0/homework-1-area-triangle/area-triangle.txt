@@ -1,0 +1,24 @@
+Enunciado:
+	Dados dos puntos calcular el area del rectangulo
+Formulas que seran usadas:
+	Area rectangulo: base * altura
+	base : abs(x2-x1) perteneciente a num R
+	altura: abs(y2-y1) perteneciente a num R
+
+Modelo matematico:
+	Area = abs(x2-x1) * abs(y2-y1)
+
+Algoritmo:
+
+1. Leer punto x1,y1 
+2. Leer punto x2,y2
+3. Verificar que base -> restar(x1,x2) es diferente de 0 
+4. Si base es diferente de cero guardar, caso contrario terminar la ejecucion
+5. Verifiar que base no sea negativa 
+6. Verificar que altura-> restar(y1,y2) es diferente de 0 
+7. Si altura es diferente de cero guardar, caso contrario terminar la ejecucion
+8. Verifiar que altura no sea negativa 
+9 Calcular area->multiplicar(base,altura)
+10. Mostrar area
+
+	

@@ -1,0 +1,40 @@
+Inputs:
+
+S=longitud de los lados
+N=numero de lados
+
+puntos q forman la diagonal de un triangulo rectangulo (A)
+
+
+Mathematic-logic Model:
+
+AREA=(Apotema*Perimetro)/2
+
+perimetro=N*S
+
+angulo=360/N
+
+angulo del triangulo=angulo/2
+
+apotema=(S/2)/tg(angtr)
+
+
+Algorithm:
+1- leer S, N
+2- calcular apotema(S,N):Apotema
+3- calcular perimetro=N*S
+
+4- calcular area AREA=(Apotema*Perimetro)/2
+
+5- mostrar AREA
+
+apotema (S,N)
+
+1- angulo=360/N
+
+2- angtri=angulo/2
+
+3- Apotema=(S/2)/tg(angtri)
+
+4- return Apotema
+

@@ -1,0 +1,62 @@
+
+
+MODELO MATEMATICO
+******************
+pendiente = m = (Y2-Y1)/(X2-X1)
+
+si:
+	m = 0 => Y1=Y2 => Linea horizontal
+	m = indefinido => X1=X2 => Linea vertical
+	m > 0 pendiente ascendente
+	m < 0 pendiende desendente
+
+
+H = [(X2-X1)^2 - (Y2-Y1)^2]^1/2
+
+@ = |arctan(m)|
+
+beta = 180 - alpha - tita 
+beta = 90 - alpha
+
+H/sen(tita) = L1/sen(alpha) = L2/sen(beta)
+
+L1 = [H*sen(alpha)]/sen(tita)]
+
+L2 = [H*sen(beta)]/sen(tita)]
+
+Area_Rectangulo = L1 * L2
+
+
+ALGORITMO
+**********
+
+input: 
+	X1, X2, Y1, Y2
+output:
+	Area_Rectangulo
+	
+
+Leer:
+	X1, X2, Y1, Y2
+	
+Calcular:
+	Delta_X = X2-X1
+	Delta_Y = Y2-Y1
+
+Determinar casos de uso
+si:
+	Delta_X = 0
+		print "Es una linea Vertical"
+si:
+	Delta_Y = 0
+		print "Es una linea Horizontal"
+si no:
+	m = Delta_Y/Delta_X
+	@ = |arctan(m)|
+	beta = 90 - alpha
+	H = [Delta_X^2 - Delta_Y^2]^1/2
+	Constante = [H/sen(tita)]
+	L1 = Constante*sen(alpha)
+	L2 = Constante*sen(beta)
+	Area_Rectangulo = L1 * L2
+	print "El area del rectangulo es: " + Area_Rectangulo 

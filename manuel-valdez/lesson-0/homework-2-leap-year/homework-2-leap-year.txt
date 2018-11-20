@@ -1,0 +1,33 @@
+Mathematical - logical model
+----------------------------
+A leap year can be identified if it accomplish these 3 conditions:
+- be exactly divided by 4
+- not exactly divided by 100
+- be exactly divided by 400
+
+this is applied in formula:
+	
+	p && (! q || r)
+	
+From above statements it can be defined "exactly divided" as:
+	dividend / divisor = reminder => 0 		
+where:
+	reminder = dividend - (quotient * divisor)
+
+Algorithm
+---------
+Inputs: year
+Output: T or F
+
+1.- IsLeapYear(year):T or F
+2.- IsYearDivisible(year, number): T or F
+2.1.- IsRemainderHigherThanCero(reminder): T or F
+2.1.1.- divisible = reminder > 0
+3.- GetDivisionRemainder(year, number, quotient): reminder
+3.1.- reminder = year - (quotient*number)
+4.- GetQuotient(year, number): quotient
+4.1.- quotient = year/number
+5.- p = IsYearDivisible(year, 4)
+6.- q = IsYearDivisible(year, 100)
+7.- r = IsYearDivisible(year, 400)
+8.- leap = p && (!q || r): T or F

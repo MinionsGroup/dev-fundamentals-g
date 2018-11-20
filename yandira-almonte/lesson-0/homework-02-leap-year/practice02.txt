@@ -1,0 +1,30 @@
+Leap Year
+
+Mathematical model 
+p ^ (~q  v r)
+
+p is divisible by 4
+Q is not divisible by 100
+R is divisible by 400
+Algorithm
+	Input(year)
+	isLeap = false
+	Mod (year, 4): result, residue
+	If(residue == 0)
+		Mod(year,400):result,residue_400
+		Mod(year,100):result,residue_100
+		If(residue_400 == 0 || residue_100 != 0)
+			IsLeap=true
+		Else
+			isLeap = false
+	if(isLeap == true)
+		print “The year is leap”
+	else
+		print “The year is not leap”
+
+Mod(dividend, divisor):result, residue
+	result=0
+	Mientras (dividend >=divisor)
+		dividend = dividend – divisor
+		result++;
+	residue=dividend
