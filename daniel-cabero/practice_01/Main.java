@@ -1,5 +1,7 @@
 package practice_01;
 
+import java.util.Scanner;
+
 /**
  * Created by Daniel Cabero
  *
