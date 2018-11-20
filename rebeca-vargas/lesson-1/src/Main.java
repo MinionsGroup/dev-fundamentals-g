@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String args[]) {
+
         Car car1 = new Car();
         Car car2 = new Car();
         Car car3 = new Car();
@@ -12,9 +15,14 @@ public class Main {
         car2.setMaxGas(30);
         car3.setMaxGas(50);
 
-        car1.setDistance(100);
-        car2.setDistance(100);
-        car3.setDistance(100);
+        System.out.println("Enter the distance: ");
+        Scanner scanner = new Scanner(System.in);
+        car1 = scanner.nextInt();
+        car2 = scanner.nextInt();
+        car3 = scanner.nextInt();
+
+        File file = new File("setGas.txt");
+        Scanner fileScanner = new Scanner(file);
 
         car1.setGas(25);
         car2.setGas(9);

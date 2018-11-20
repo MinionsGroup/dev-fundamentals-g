@@ -15,10 +15,6 @@ public class Car {
         this.recorrido = 0;
     }
 
-    public Car() {
-
-    }
-
     //test
     public double getGas() {
         return gas;
@@ -76,9 +72,6 @@ public class Car {
 
     public void move(double distance) {
         fillGas();
-        if (isPowerOn == false) {
-            powerOn();
-        }
         while ((gas > 0) && (recorrido < distance)) {
             gas = gas - maxConsume;
             recorrido = recorrido + 1;
