@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Scanner;
+
 /**
  * This class build the car.
  *
@@ -13,34 +15,41 @@ class Car {
     private double distanceMoved;
     private double performance;
 
-    Car() {
+    public Car(){
         statusEngine = false;
         gas = 0;
         distanceMoved = 0;
-        tankCapacity = 0;
-        performance = 0;
-        distanceMoved = 0;
+        this.tankCapacity = 100;
+        this.performance = 0;
     }
-    void powerOn() {
+
+    public Car(double tankCapacity, double performance) {
+        statusEngine = false;
+        gas = 0;
+        distanceMoved = 0;
+        this.tankCapacity = tankCapacity;
+        this.performance = performance;
+    }
+    public void powerOn() {
         if (!statusEngine) {
             statusEngine = true;
         }
     }
-    void powerOff() {
+    public void powerOff() {
         if (statusEngine) {
             statusEngine = false;
         }
     }
-    void fillGas(double gas) {
-        if (this.tankCapacity >= (gas + gas))
+    public void fillGas(double gas) {
+        if (tankCapacity >= (gas + gas))
             this.gas += gas;
         else {
             this.gas = tankCapacity;
-            System.out.println("Extra gas " + (gas - this.gas));
+            System.out.println("Extra gas " + (this.gas - gas));
         }
     }
 
-    void moveDistance(double distance) {
+    public void moveDistance(double distance) {
         if (statusEngine) {
             double spendGasoline = performance * distance;
             if (spendGasoline < gas) {
@@ -55,8 +64,13 @@ class Car {
             System.out.println("Turned off car, the car can't move.");
         }
     }
+    public double carDistance() {
+        System.out.println("Fill in with car's distance per gas: ");
+        Scanner scanner = new Scanner(System.in);
+        return Double.parseDouble(scanner.nextLine());
+    }
 
-    void printInformation() {
+    public void printInformation() {
         System.out.println("Status Engine: " + statusEngine);
         System.out.println("Gas: " + gas);
         System.out.println("Gas Capacity: " + this.tankCapacity);
