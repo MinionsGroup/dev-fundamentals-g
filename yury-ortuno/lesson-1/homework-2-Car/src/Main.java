@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /**
  * Created by Yury Ortuno on 11/13/2018.
  */
@@ -20,25 +24,25 @@ public class Main {
 
         // Maximum capacity
         double maxCapacityGas;
-        maxCapacityGas = Math.random() * 1000;
+        maxCapacityGas = 700;
         chevrolet.setMaxCapacityGas(maxCapacityGas);
 
-        maxCapacityGas = Math.random() * 1000;
         nissan.setMaxCapacityGas(maxCapacityGas);
 
-        maxCapacityGas = Math.random() * 1000;
         susuki.setMaxCapacityGas(maxCapacityGas);
 
         // Fill gas
         double fillGas;
-        fillGas = Math.random() * chevrolet.getMaxCapacityGas();
-        chevrolet.fillGas(fillGas);
-
-        fillGas = Math.random() * nissan.getMaxCapacityGas();
-        nissan.fillGas(fillGas);
-
-        fillGas = Math.random() * susuki.getMaxCapacityGas();
-        susuki.fillGas(fillGas);
+        String path = "yury-ortuno/lesson-1/homework-2-Car/src/fuel.txt";
+        try {
+            File file = new File(path);
+            Scanner readFile = new Scanner(file);
+            chevrolet.fillGas(readFile.nextDouble());
+            nissan.fillGas(readFile.nextDouble());
+            susuki.fillGas(readFile.nextDouble());
+        } catch (FileNotFoundException e) {
+            System.out.println("Error: File was not found!!  " + System.getProperty("user.dir") + "/" + path);
+        }
 
         // PowerOn car
         chevrolet.powerOn();
@@ -46,7 +50,9 @@ public class Main {
         susuki.powerOn();
 
         // Route to the meta by kilometers
-        double meta = 30.0;
+        Scanner read = new Scanner(System.in);
+        System.out.println("Enter distance to the meta");
+        double meta = read.nextDouble();
 
         // Total distance traveled by car
         double distanceTraveledChevrolet = chevrolet.totalRouteCar();

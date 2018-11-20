@@ -55,6 +55,7 @@ public class Car {
                 System.out.print("\t");
             }
         } else {
+            System.out.println("The car " + mark + " doesn't completed the race");
             for (int kilometer = 1; kilometer <= (totalRouteCar / meta) * 10; kilometer++) {
                 System.out.print("\t");
             }
