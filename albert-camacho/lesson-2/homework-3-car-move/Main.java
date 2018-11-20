@@ -3,21 +3,32 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 public class Main {
-    public static void main (String arg[]) {
+    public static void main (String args[]) {
         int numCars = 3;
+        double distance = 1500;
         List<Car> listCars = new ArrayList<>();
 
-        // Gas quantity with which the cars will be filled
-        double gas = getGasFromFile("albert-camacho/lesson-2/homework-3-move-car/gas.txt");
+        // 1. Retrieves the distance from argument if no exception is raised
+        if (args.length > 0) {
+            try {
+                distance = Double.parseDouble(args[0]);
+            } catch(NumberFormatException e){
+                System.out.println("Alert: Entered value isn't a double type. Taking the default value... ");
+            }
+        }
 
-        System.out.println("There are " + numCars + " cars");
+        // 2. Gas quantity with which the cars will be filled
+        double gas = getGasFromFile("albert-camacho/lesson-2/homework-3-car-move/gas.txt");
 
+        System.out.println("This app tests " + numCars + " cars, please enter their performance (km/lt)...");
+
+        // 3. Ask the performance value of all cars
         for (int i = 1 ; i <=numCars; i++) {
-            // Cars will have different tank capacity and gasConsumed
+            // Cars will have a random tank capacity
             double tankCapacity = getRandomNumberInRange(50, 119.5);
 
             System.out.println("\nCar " + i + " has tank capacity of " + tankCapacity +" lts.");
-            // How many kilometer per liter the car consumes the gas
+            // Asks through console how many kilometer per liter the car consumes the gas
             double gasConsume = getNumberFromConsole("Enter the performance (km/lt): ");
 
             Car car = new Car(tankCapacity,gasConsume);
@@ -27,10 +38,7 @@ public class Main {
             listCars.add(car);
         }
 
-        // All cars will travel the same distance
-        System.out.println("\nAll cars were filled with " + gas + " lts. of fuel.");
-        double distance = getNumberFromConsole("Enter the distance they will travel: ");
-
+        // 4. Move the cars and print their status
         System.out.println("\nStatus of all Cars if the distance is: " + distance + " Kms");
         System.out.println("-----------------------------------------------------\n");
 
