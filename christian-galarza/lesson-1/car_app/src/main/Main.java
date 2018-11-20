@@ -3,11 +3,11 @@ package main;
 public class Main {
     public static void main(String[] args) {
         //create the car with tank capacity and performance.
-        CarManager chariot = new CarManager(0,0);
-        CarManager f1mercedes = new CarManager(100, 0.1);
-        CarManager f1ferrari = new CarManager(100, 0.15);
-        CarManager f1mclaren = new CarManager(105, 0.23);
-        CarManager nissanterrano = new CarManager(300,0.9);
+        Car chariot = new Car(0,0);
+        Car f1mercedes = new Car(100, 0.1);
+        Car f1ferrari = new Car(100, 0.15);
+        Car f1mclaren = new Car(105, 0.23);
+        Car nissanterrano = new Car(300,0.9);
         //insert the quality of gas and power on the car.
         f1mercedes.fillGas(100);
         f1ferrari.fillGas(100);
