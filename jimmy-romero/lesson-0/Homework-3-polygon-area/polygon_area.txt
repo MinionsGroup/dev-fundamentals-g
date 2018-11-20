@@ -1,0 +1,26 @@
+Area of regular polygon given a side length and the number of sides.
+
+Inputs
+numberOfSides, sideLength
+
+Model mathematic-logic
+Area = (Perimeter * Apotema)/2
+Perimeter = numberOfSides * sideLength
+Apotema = sideLength/(2 * tan alfa)
+alfa = 360/(2 * numberOfSides)
+
+
+Algorithm
+1. Read sideLength, numberOfSides
+2. result = calcArea(sideLength, numberOfSides)
+3. Show "The area of the polygon is: " + result
+
+calcArea(sideLength, numberOfSides)
+1. return (calcPerimeter(sideLength, numberOfSides) * calcApotema(sideLength, numberOfSides)) / 2
+
+
+calcPerimeter(sideLength, numberOfSides)
+1. return sideLength * numberOfSides
+
+calcApotema(sideLength, numberOfSides)
+1. return sideLength / 2 * tan(360 / (2 * numberOfSides))

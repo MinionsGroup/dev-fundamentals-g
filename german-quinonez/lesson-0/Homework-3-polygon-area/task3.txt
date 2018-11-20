@@ -1,0 +1,24 @@
+Calcular el area de un poligono regular
+
+Inputs:
+
+S=longitud de los lados
+N=numero de lados
+
+
+Mathematic-logic Model:
+
+α=360/N
+apotema =(L/2)/tan⁡(α/2) 
+area∆ =(L * apotema)  / 2 
+area del poligono = area∆ * N
+
+
+Algorithm:
+1.	Leer N, L
+3.	Calcular α :360/N
+4.	Calcular apotema:(L/2)/tan⁡(α/2) 
+5.	Clacular area_triangulo: (L * apotema)  / 2 
+6.	Calcular area = area_triangulo * N
+7.	Print “El area del poligono es:” + area.
+

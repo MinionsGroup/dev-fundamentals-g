@@ -1,0 +1,51 @@
+Mathematical model 
+
+If we have the coordinates X1,Y1(1,1) and X2, Y2 (3,3), we have to find the area of triangle rectangle that is composed for that straight line (it corresponds to the hypotenuse of that triangle) 
+Initially we need to project the coordinates x3,y3 in order to find base and height of the triangle rectangle 
+X3 = X2 
+Y3= Y1 
+Then we find: 
+- The distance between the point P1(x1,y1) and P3(x3,y3), this distance is the base - The distance between the point P2(x2,y2) and P3(x3,y3), this distance is the height 
+For that we use this formule: 
+
+d = v (x2 - x1)^2 + (y2 - y1)^2 
+
+Finally we need to find the area: 
+A = b * h / 2
+
+Algorithm 
+	Input (x1, y1, x2, y2): isTriangle 
+	If isTriangle is true: 
+		Project point 3, getCordinates (x2 , y1 ) : x3, y3 
+		Find base, getDistance(x1, y1, x3, y3): distance 
+		Find height, getDistance(x2, y2, x3, y3): distance 
+		Find area, getArea(base, height): area 
+		Show area, show(area) 
+	 Else: 
+		  Print “Those coordinates cannot form a triangle” 
+
+
+Input(x1,y1,x2,y2):isTriangle 
+ isTriangle = true 
+ If x1 = x2 or y1=y2 
+  isTriangle=false 
+
+
+getCoordinates(x , y): x3,y3 
+ x3=x 
+ y3=y 
+ 
+getDistance(x1, y1, x2, y2):distance 
+ x_member= x2 – x1 
+ x_member=x_member * x_member 
+ y_member= y2 – y1 
+ y_member= y_member * y_member 
+ distance=v (x_member + y_member)
+  
+getArea(base, height): area 
+ area = (base * height)/2 
+ 
+show(area) 
+ print “The area is” + are
+ 
+ 

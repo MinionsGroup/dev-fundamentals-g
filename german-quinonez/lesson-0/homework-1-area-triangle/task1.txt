@@ -1,0 +1,18 @@
+Dados 2 puntos, representando los extremos de la diagonal de un triangulo rectangulo. 
+Calcular el area de dicho rectangulo
+
+Inputs:
+x1,y1
+x2,y2
+
+Mathematic-logic Model:
+  
+ Lado  Dx=||x2-x1||
+ Lado  Dy=||y2-y1||
+
+Algorithm
+1- Leer x1,y1;x2,y2
+2- calcular Dx=||x2-x1||
+3- calcular Dy=||y2-y1||
+4- calcular area=Dx*Dy
+5- Mostrar area
