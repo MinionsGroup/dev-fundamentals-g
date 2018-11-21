@@ -1,0 +1,29 @@
+Leap year
+
+Inputs
+p, q, r
+
+Model mathematic-logic
+p is divisible by 4
+q is not divisible by 100
+r is divisible by 400
+where p, q and r are the year
+
+p ^ (~q v r)
+
+Algorithm
+
+Is leap Year
+1.	Read year.
+2.	Is year divisible by 400. year : p
+3.	Is year divisible by 4. year : r
+4.	Is year not divisible by 100. year : q
+5.	If p : is Leap Year
+else if r and q : is Leap Year
+else : Is not Leap Year
+
+Is year divisible by a number : true/false
+1.	Read year
+2.	quotient  = Year/number
+3.	if quotient * number == Year : true
+else false
