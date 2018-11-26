@@ -4,9 +4,9 @@ public class Main {
         Auto carA = new Auto(50, 0.05);
         Auto carB = new Auto(30, 0.03);
         Auto carC = new Auto(80, 0.23);
-        carA.FillGasolina(40);
-        carB.FillGasolina(30);
-        carC.FillGasolina(80);
+        carA.LoadGas(40);
+        carB.LoadGas(30);
+        carC.LoadGas(80);
         carA.PowerOn();
         carB.PowerOn();
         carC.PowerOn();
