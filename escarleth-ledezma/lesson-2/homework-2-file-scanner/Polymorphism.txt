@@ -1,0 +1,8 @@
+What is Polymorphism?
+Polymorphism is a OOPs concept where one name can have many forms.
+ For example, you have a smartphone for communication. The communication mode you choose could be anything.
+It can be a call, a text message, a picture message, mail, etc. So, the goal is common that is communication,
+but their approach is different. This is called Polymorphism.
+ What is Dynamic Polymorphism?
+Dynamic Polymorphism is the mechanism by which multiple methods can be defined with same name and signature
+in the superclass and subclass. The call to an overridden method are resolved at run time.
