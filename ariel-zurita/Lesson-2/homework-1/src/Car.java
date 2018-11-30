@@ -12,6 +12,7 @@ public class Car {
     public Car(){
         gas = 0;
         distance = 0;
+        performance = 0;
         powerOn = false;
     }
 
@@ -31,16 +32,8 @@ public class Car {
         return gas;
     }
 
-    public void setDistance(double distance){
-        this.distance = distance;
-    }
-
     public double getDistance(){
         return distance;
-    }
-
-    public void setPowerOn(boolean powerOn){
-        this.powerOn = powerOn;
     }
 
     public boolean getPowerOn(){
@@ -50,14 +43,15 @@ public class Car {
     public void move(double gas, double distance, double performance){
         double usedGas = distance / performance;
         if(gas > usedGas){
-            double newGas = gas - usedGas;
-            setGas(newGas);
-            setPowerOn(true);
+            this.gas = gas - usedGas;
+            double distanceMoved = performance * gas;
+            this.distance += distanceMoved;
+            this.powerOn = true;
         }
         else{
             double distanceMoved = performance * gas;
-            setDistance(distanceMoved);
-            setPowerOn(false);
+            this.distance += distanceMoved;
+            this.powerOn = false;
         }
     }
 
@@ -99,8 +93,7 @@ public class Car {
         Car car2 = new Car();
         Car car3 = new Car();
         Car[] cars = {car1, car2, car3};
-        //This is the distance that car should move
-        double distance = askDoubleValue("Enter the distance to drive: ");
+
 
         ArrayList<Double> gasValues = readAndGetValues();
         setGasValues(cars, gasValues);
@@ -112,20 +105,23 @@ public class Car {
             cars[carNumber].setPerformance(carPerf);
         }
 
-        //Set same distance to all cars
-        for(Car car:cars){
-            car.setDistance(distance);
-            car.move(car.getGas(), car.getDistance(), car.getPerformance());
-        }
-
-        //Printing results
-        for(int carNumber=0; carNumber<cars.length; carNumber++){
-            int newIndex = carNumber + 1;
-            if(cars[carNumber].getPowerOn()){
-                System.out.println("Car " + newIndex + " reached distance, you have " + cars[carNumber].getGas() + "L in your gas tank");
+        while (true){
+            //This is the distance that car should move
+            double distance = askDoubleValue("Enter distance to drive: ");
+            //Set same distance to all cars
+            for(Car car:cars){
+                car.move(car.getGas(), distance, car.getPerformance());
             }
-            else{
-                System.out.println("Car " + newIndex + " didn't reach distance, Car " + newIndex + " just moved " + cars[carNumber].getDistance() + " KMs");
+
+            //Printing results
+            for(int carNumber=0; carNumber<cars.length; carNumber++){
+                int newIndex = carNumber + 1;
+                if(cars[carNumber].getPowerOn()){
+                    System.out.println("Car " + newIndex + " reached distance, you have " + cars[carNumber].getGas() + "L in your gas tank");
+                }
+                else{
+                    System.out.println("Car " + newIndex + " didn't reach distance, Total distance " + cars[carNumber].getDistance() + " KMs");
+                }
             }
         }
     }

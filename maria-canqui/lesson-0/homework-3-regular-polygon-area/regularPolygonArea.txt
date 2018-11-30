@@ -1,0 +1,16 @@
+Exercise: 
+	Calculate the regular polygon area, given a side numbers and length
+
+Mathematical model:
+	Apothem: side / (2 * tan(centralAngle/2))
+	Area : (Perimeter * Apotema)/2
+	Perimeter : numberSides * sideLength
+
+Algorithm:
+1. Enter numberOfSides
+2. Enter sideLenth
+3. Calculate the centralAngle = 360 / numberSides
+4. Calculate the apothem = sideLength / (2 * tan(centralAngle/2))
+5. Calculate the perimeter = sideLength * numberSides
+6. Calculate Polygon area = (perimeter * apothem) / 2
+7. Display area

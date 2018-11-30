@@ -1,0 +1,27 @@
+Enunciado:
+	verificar si el año ingresado es bisiesto
+Condicion: 
+	leapYear = p && (! q || r)
+Donde:
+	p = divisible entre 4
+	! q = divisible entre 100
+	r = divisible entre 400
+
+Algoritmo:
+
+1. Leer año
+2. Verificar si año es divisible entre div= 4. Calcular p ->isDivisible(año, div). Si es true continuar y Guardar valor, caso contrario finalizar
+3. Verificar si año es divisible entre div= 100. Calcular q ->isDivisible(año, div). Guardar valor
+4. Verificar si año es divisible entre div= 400. Calcular r ->isDivisible(año, div). Guardar valor
+5. Verificar si (! q || r) ->  q es falso o r es true, si no cumple la condicion terminar ejecucion -> z = verifyTwoConditions(q,r)
+6. Verificar  p && z, ambos deben ser true, si se cumple la condicion retornar año, caso contrario terminar ejecucion
+
+
+subfunciones:
+	isDivisible(año, div): 
+1. Verificar si año es menor a div, si div es mayor terminar ejecucion
+2. Dividir: resultDiv = año/div
+3. Redondear resultDiv 
+4. verificar si año es igual a div * resultDiv, si se cumple la condicion retornar true, caso contrario false
+ 
+

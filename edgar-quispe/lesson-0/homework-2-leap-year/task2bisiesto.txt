@@ -1,0 +1,52 @@
+# Software Development Fundamentals
+dev-fundamentals-g
+Group: G
+Module: 1
+Edgar Quispe Task 1 lesson 0
+
+aniobisiesto
+
+p es divisible by 4
+q is not divisible by 100
+r is divisible by 400
+ leapYear = 0                      p = 0, q = 0, r = 0
+leapYear = p ʌ ( ￢p ∨ r)         p, q, r > 0
+
+
+Algoritmo
+  
+1. leer_ano(anio)
+case1 anio01=p/4
+case2 anio02=q/100
+case1 anio03=r/400
+
+2. anio_bisiesto_verif(ani)
+ anio01 ʌ ( ￢anio02 ∨ anio03)
+	
+3. findcase(anio)
+case1 ani1=anio/4
+pyear=(anio1*4)-anio
+si pyear mayor a 1
+flagyeardivby4=0
+sino
+flagyeardivby4=1
+
+
+case2 anio2=anio/100
+
+si anio2 mayor que 0
+
+flagyeardivby100=1
+sino
+flagyeardivby100=0
+
+case3
+
+anio3=anio/400
+si anio3 mayor que 0
+
+flagyeardivby400 =1
+sino 
+flagyeardivby400 = 0
+
+

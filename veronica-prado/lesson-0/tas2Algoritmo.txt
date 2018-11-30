@@ -1,0 +1,55 @@
+Task2: Given a year verify if this is a leap year
+Algorithm:
+1.	Read year
+2.	Verify is a leap year (IsLeapYear (year))
+3.	Show True in case year is a leap year, False in another case
+
+IsLeapYear(year){
+	P = year is divisible by 4 (IsDivisible(year, 4))
+	Q = year is divisible by 100 (IsDivisible(year, 100))
+	R = year is divisible by 400 (IsDivisible(year, 400))
+	If (p == True){
+		If(q is different to True Or r is True)
+		  Return True
+}
+ Return false
+}
+
+IsDivisible(year, divisible){
+	div = Divide year/divisible 
+	mult = multiplicate div * divisible
+	rest = subtract year – mult
+	if rest is 0
+		return True
+	else
+		return False
+}
+
+
+
+
+
+
+Task 3:Given the following information about  a regular polygon :
+-	Side (L)
+-	number of sides (n)
+Calculate the polygon’s area
+Mathematic-logic Model
+Area (regular Polygon) = (Perimeter * apothem)/2
+Apothem = L/(n tang (360/(n*2) ))
+Algorithm
+1.	Read number of sides (n)
+2.	Read size side (L)
+3.	Calculate area PolygonArea(n,L)
+4.	Show area
+
+PolygonArea(n,L){
+	Calculate apothem a = aphotem(n, L)
+	area = (L*n * a)/2
+	Return area
+}
+
+Apthotem(n,L){
+Apt= L/(n tang(360/ n*2) )
+Return apt
+}

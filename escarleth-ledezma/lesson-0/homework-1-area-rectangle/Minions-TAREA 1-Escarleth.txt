@@ -1,0 +1,33 @@
+TAREA 1
+Dados 2 puntos, representando los extremos de la diagonal de un triángulo rectángulo. 
+Calcular el área de dicho rectángulo.
+
+Modelo matemático-lógico
+
+El area de un rectangulo corresponde a:
+                 area=base*altura
+Donde:
+base=x2-x1
+altura=y2-y1
+
+Entrada:(x1,y1)(x2,y2) extremos de la diagonal de un triángulo rectángulo
+Salida:  Area rectangulo
+Algoritmo
+    1. Leer los dos puntos
+    2. Calcular la base(x2-x1)
+    3. Calcular la altura (y2-y1)
+    4. Calcular el área del rectángulo calculateArea(base,altura)
+    5. Mostrar resultado printArea(area)
+
+calculateArea(base,altura)
+  Si base y altura!=0
+    área rectángulo=base*altura
+
+ printArea(area)
+	print “El area del rectangulo es: ”  area
+
+Notas: Cabe resaltar que no aplica al caso en que los dos puntos dados, que conforman un segmento de recta sean paralelas al eje de las abscisas y ordenadas.
+
+No aplica: x2=x1     y/o  y2=y1  
+
+Solamente el caso mencionado en la tarea.

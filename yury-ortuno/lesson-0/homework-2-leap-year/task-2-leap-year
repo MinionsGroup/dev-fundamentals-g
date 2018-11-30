@@ -1,0 +1,22 @@
+Inputs:
+    year = year to check if it's leap year
+Mathematic-logic Model:
+    P^(¬Q v R)
+Algorithm:
+1- read Y
+2- verify isRemainderZero(Y,4):P
+3- verify isRemainderZero(Y,100):Q
+4- verify isRemainderZero(Y,400):R
+
+5- If P^(¬Q v R)==True
+    show "leap year"
+    else
+    show "isn't leap year"
+
+
+isRemainderZero(Y,divisor)
+1- cociente=Y/div
+2- if Y == (cociente*div)
+    return True
+    else
+    return False

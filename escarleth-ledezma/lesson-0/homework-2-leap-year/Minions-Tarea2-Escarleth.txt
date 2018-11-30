@@ -1,0 +1,62 @@
+TAREA 2
+Determinar si un año es bisiesto dado el número del año
+
+Modelo matemático-lógico
+
+El modelo matemático-lógico para calcular si un año es bisiesto:
+
+                        p y [¬q ó r]
+
+Donde año:
+    • p: Es divisible entre 4
+    • ¬q: No es divisible entre 100
+    • r: Es divisible entre 400
+
+Algoritmo
+
+    1. Leer el año
+    2. Determinar caso según número de año findCase(año)
+    3. Determinar si es divisible entre 4 divisibleBy4(año):p
+    4. Determinar si no es divisible entre 100 notDivisibleBy100(año):q
+    5. Determinar si es divisible entre 400 divisibleBy400(año) :r
+    6. Determinar si el año es bisiesto(p,q,r)
+    7. Imprimir resultado printBisiesto(bisiesto,año,case)
+
+calculateMod(dividendo,divisor)
+ mientras dividendo > divisor-1
+    hacer dividendo=dividendo-divisor
+ fin mientras
+ resto=dividendo
+
+findCase(año)
+ si año >0
+  case 1
+ si no 
+  case 2
+
+divisibleBy4(año)
+ si calculateMod(año,4)=0
+   p=1
+
+notDivisibleBy100(año)
+ si calculateMod(año,100)>0
+   q=1
+
+divisibleBy400(año)
+ si divisibleBy400(año,400 )=0
+   r=1
+
+bisiesto(p,q,r)
+   si  p=1 y (q=1 ó r=1)
+     bisiesto=1
+   si no
+	 bisiesto=0
+
+printBisiesto(bisiesto,año,case)
+ si case=1 y bisiesto=1
+  print “El año” año “es bisiesto”
+ si case =1 y bisiesto=0
+  print “El año” año “no es bisiesto”
+ si case=2
+  print “No se puede determinar si es año bisiesto”
+

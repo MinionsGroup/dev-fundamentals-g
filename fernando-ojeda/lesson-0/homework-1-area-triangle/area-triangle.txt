@@ -1,0 +1,36 @@
+                            Mathematic-logic Model
+
+area = 0                   X2 == X1
+area = 0                   Y2 == Y1
+area = a*b                 Y2 ≠ Y1 and X2 ≠ Y1
+
+
+                                   Algorithm
+
+calculatorArea(x1, y1, x2, y2): area
+1.	Leer x1, y1, x2, y2
+2.	Determinar el caso, findCase (x1, y1, x2, y2): case
+3.	Calcular el área, calcArea(x1, y1, x2, y2, case): área
+4.	Mostrar área, showArea(area)
+
+findCase(x1, y1, x2, y2): case
+  1.	Si x1 ==x2
+           case = 1
+  2.	Si y1 == y2
+           case = 2
+  3.	Si x1≠x2 and y1≠y2
+           case = 3
+
+calcArea(x1, y1, x2, y2): area
+  1.	Si case = 1
+           area = 0
+  2.	Si case = 2
+           area = 0
+  3.	Si case = 3
+           a = |x2 – x1|
+           b = |y2 – y1|
+           area = a * b
+
+showArea(area)
+      print(“The área of the rectangle is:” + area)
+
