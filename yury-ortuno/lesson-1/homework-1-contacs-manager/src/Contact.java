@@ -5,15 +5,15 @@ public class Contact {
     private String name;
     private String phoneNumber;
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    String getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
