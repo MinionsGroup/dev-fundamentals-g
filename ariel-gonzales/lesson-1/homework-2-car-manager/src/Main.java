@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         List<Car> garage = new ArrayList<>();
 
-        double distance = 49;
+        double distance = 48;
 
         Car suzuki = new Car(26, 3);
         suzuki.powerOn();

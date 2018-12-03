@@ -26,8 +26,12 @@ public class Car {
     }
 
     public void move(double distance) {
-        this.mileage = this.gasConsume * this.gas;
-        this.gas -= (this.gas < (distance / this.gasConsume)) ? this.gas : (distance / this.gasConsume);
+        if (isPowerOn) {
+            this.mileage += (distance > this.gasConsume * this.gas) ? this.gasConsume * this.gas : distance;
+            this.gas -= (this.gas < (distance / this.gasConsume)) ? this.gas : (distance / this.gasConsume);
+        } else {
+            System.out.println("Plss, turn on the car.");
+        }
     }
 
     public double getGas() {
