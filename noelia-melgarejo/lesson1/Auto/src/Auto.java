@@ -13,6 +13,7 @@ public class Auto {
         this.gasConsumption = gasConsumption;
         mileage = 0;
         isPowerOn = false;
+        mileage = 0;
         gas = 0;
 
     }
@@ -107,21 +108,23 @@ public class Auto {
 
     /**
      * Moves the car
-     * @param distanceToMove expressed in Km
+     * @param distance expressed in Km
      */
-    public void move(double distanceToMove) {
-        mileage = distanceToMove;
+    public void move(double distance) {
+        double distanceToMove = distance;
+
         double cantGasExist = 0;
-        cantGasExist = gas - (gasConsumption * mileage);
+        cantGasExist = gas - (gasConsumption * distance);
         if (cantGasExist > 0)
             gas = gas - cantGasExist;
 
         if (cantGasExist < 0) {
-            mileage = (1 / gasConsumption) * gas;
+            distance = (1 / gasConsumption) * gas;
             gas = 0;
 
-            System.out.println("the gas is only for : " + mileage + " Km");
+            System.out.println("the gas is only for : " + distance + " Km");
         }
+        mileage = mileage + distanceToMove;
         System.out.println(getGas() + " Liters -  Amount of existing gas");
         System.out.println("The car mileage :  " + getMileage()+" Km");
     }
