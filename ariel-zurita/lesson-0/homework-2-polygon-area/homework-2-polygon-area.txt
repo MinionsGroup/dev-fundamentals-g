@@ -1,0 +1,23 @@
+calcular_area_poligono 
+variables 
+	<entero> numero_lados, longitud_lado
+inicio 
+1.	validar_valores_introducidos(numero_lados)
+2.	validar_valores_introducidos(longitud_lado) 
+3.	calcular_apotema(numero_lados)
+4.	área = (numero_lados*longitud_lado*apotema)/2
+fin 
+
+
+validar_valores_introducidos 
+variables
+	<entero> numero 
+inicio 
+
+calcular_apotema
+variables 
+	<entero> numero_lados
+inicio 
+1.	calcular angulo, angulo = 360/numero_lados 
+2.	apotema = 0.5/(tag(angulo/2))
+fin 

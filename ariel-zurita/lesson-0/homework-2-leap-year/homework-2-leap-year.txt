@@ -1,0 +1,29 @@
+es_bisiesto 
+variables
+	<entero> año
+
+inicio
+1.	validar_año
+2.	año mod 4 == 0; si no se cumple esta condición el año introducido no es un año bisiesto 
+3.	año mod 100 != 0 y año mod 400 == 0; si es cumplen estas condiciones y también el paso 2 entonces el año de entrada es un año bisiesto 
+4.	si no se cumples las condiciones del paso 3 el año de entrada no es un año bisiesto 
+fin
+
+validar_año
+variables 
+	<entero> año
+
+inicio
+1.	Valor introducido es numero entero 
+2.	Tamaño entero introducido = 4
+fin
+
+mod
+variables
+	<entero> dividendo, divisor 
+
+Inicio 
+1.	dividendo / divisor = cociente 
+2.	resto = dividendo – (divisor*cociente)
+3.	si resto == 0, retornamos verdadero 
+fin 
