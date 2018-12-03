@@ -1,0 +1,70 @@
+Verify that it is a leap year, using the following formula: 
+p ˄ (¬q ˅ r)
+
+Algorithm 
+1.	Read a year: y
+2.	Calculate “p”; (year, 4): p=boolean
+	a.	p=Divisible(year/4);
+
+3.	Calculate “q”; (year,100): q= boolean
+	a.	q=Divisible(year/100);
+
+4.	Calculate “r”; (year, 400)): r=boolean	
+	a.	r= Divisible(year/400);
+
+5.	Deny_a_value (¬q): s = boolean
+	a.	s = Deny_a_value (q),
+
+6.	Calculate (s ˅ r); t= boolean
+	a.	 t= Caculate_OR (s, r)
+
+7.	Calculate (p ^ t); leap = Boolean
+	a.	Result=Caculate_And (p, t)
+
+8.	Show result(leap)
+	a.	If result = True
+		i.	Print "The"+year+" is a leap year"
+	b.	Else
+		i.	Print "The" +year+ "is NOT leap year"
+		
+Extra function
+A.	Divisible(n/m); result = Boolean
+	1.	residue =1
+	2.	n=n-m
+	3.	residue =n
+	4.	If residue equal 0?
+		a.	Yes, so result = True
+	5.	Else
+		a.	If the residue is greater than 0
+			i.	Return steps 2
+		b.	Else
+			i.	Result = false 
+	6.	Return result
+
+B.	Deny_a_value ( value), new_value
+	a.	If value is equal True
+		i.	new_value=False
+	b.	else 	
+		i.	new_value=True
+	c.	Return new_value
+
+C.	Caculate_And (value_a, value_b); result= boolean
+	a.	If value_a=True and value_b= True
+		i.	Return result= True
+	b.	If value_a=True and value_b= False
+		i.	Return result= False
+	c.	If value_a=False and value_b= True
+		i.	Return result= False
+	d.	If value_a=False and value_b= False
+		i.	Return result= False
+
+
+D.	Caculate_OR (value_a, value_b); result= boolean
+	a.	If value_a=True or value_b= True
+		i.	Return result= True
+	b.	If value_a=True or value_b= True
+		i.	Return result= False
+	c.	If value_a=False or value_b= True
+		i.	Return result= False
+	d.	If value_a=False or value_b= False
+		i.	Return result= False

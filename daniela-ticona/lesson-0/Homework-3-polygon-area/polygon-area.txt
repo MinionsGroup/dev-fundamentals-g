@@ -1,0 +1,18 @@
+Calculate the area of a regular polygon, given the size of one side and sides number: 
+
+1.	Read size of side(l), unit_metric(u), sides number(n)
+
+2.	Calculate angle(n); Alpha
+	a.	Alpha= 360/n
+3.	Calculate AC (l), AC
+	a.	AC=l/2
+4.	Calculate Apothem (l, alpha); Apothem
+	a.	Apothem= AC/(tang alpha)
+5.	Calculate area_poly(n, Alpha, AC); Area_poly
+	a.	Area_poly=n*((AC*Apothem)/2)
+6.	Show result
+	a.	Print (“The area of a regular polygon is: ”+ Area_poly+“ ”+unit_metric+”^2”)
+
+
+
+

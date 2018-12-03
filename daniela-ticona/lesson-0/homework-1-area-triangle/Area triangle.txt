@@ -1,0 +1,29 @@
+Given two points: 
+
+P1(x1,y1) and P2(x2,y2)
+
+|Ax|=|(x2-x1)|
+
+|Ay|=|(y2-y1)|
+The Area is: 
+
+Area=(|Ay|  |Ax|)/2
+
+Algorithm
+1 Read x1, y1, x2, y2, metric unit
+2. Calculate:  Ax and Ay
+3. Calculate: Area
+4. show área
+
+Caculate_sides (x1, y1, x2, y2); Ax, Ay
+	Ax=|(x2-x1)|
+	Ay=|(y2-y1)|
+Calculate_area (Ax,Ay); Area
+	Area=(|Ay|  |Ax|)/2
+Show_area (Area)
+Print (Area + metric unit+”^2”)
+
+
+
+
+
