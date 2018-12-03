@@ -25,10 +25,13 @@ public class Car {
     }
 
     public void move(double distance) {
-        mileage = gas * gasConsumption;
-        if (powerON && gas != 0) {
-            gas = distance <= mileage ? gas - (1 / gasConsumption * distance) : 0.0;
-            mileage += gas != 0 ? distance : mileage;
+        if (powerON && gas > 0) {
+            double maxDistanceToMove = gas * gasConsumption;
+            gas = distance <= maxDistanceToMove ? gas - (1 / gasConsumption * distance) : 0.0;
+            mileage += gas != 0 ? distance : maxDistanceToMove;
+            if (gas == 0) {
+                powerOff();
+            }
         } else {
             System.out.println("Turn on the car and fill the gas");
         }
