@@ -1,0 +1,29 @@
+ANO BISIESTO
+*************
+
+MODELO MATEMATICO
+******************
+Los años bisiestos son los divisibles entre 4 (como 2004, 2008, etc.)
+ 		excepto si es divisible entre 100, entonces no es bisiesto (como 2100, 2200, etc.)
+ 	 		excepto si es divisible entre 400, entonces sí (como 2000, 2400)
+
+ALGORITMO
+*********
+input: 
+	año
+output: 
+	string
+
+Leer año
+
+Si año % 4 = 0
+	Si año % 100 = 0
+		Si año % 400 = 0
+			 print "El año es un año bisiesto (tiene 366 días)"
+		Si no
+			print "El año no es un año bisiesto (tiene 365 días)"
+	Si no
+		print "El año es un año bisiesto (tiene 366 días)"
+Si no
+	print "El año no es un año bisiesto (tiene 365 días)"
+
