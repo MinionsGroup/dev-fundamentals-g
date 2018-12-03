@@ -18,7 +18,7 @@ public class Main {
         }
 
         // 2. Gas quantity with which the cars will be filled
-        double gas = getGasFromFile("albert-camacho/lesson-2/homework-3-car-move/gas.txt");
+        double gas = getGasFromFile("albert-camacho/lesson_2/homework-3-car-move/gas.txt");
 
         System.out.println("This app tests " + numCars + " cars, please enter their performance (km/lt)...");
 
