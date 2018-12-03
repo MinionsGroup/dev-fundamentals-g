@@ -35,10 +35,11 @@ public class Car {
         double maxDistance = gasConsume * gas;
         if (distance <= maxDistance) {
             this.distance += distance;
+            this.gas -= this.distance / this.gasConsume;
         } else {
             this.distance += maxDistance;
+            this.gas = 0;
         }
-        this.gas -= this.distance / this.gasConsume;
     }
 
     public void setCapacity(double capacity) {
