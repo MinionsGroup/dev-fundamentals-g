@@ -7,7 +7,7 @@ public class Car {
 
     public Car(double maxThankCapacity, double gasConsumption) {
         gas = 0;
-        mileage=0;
+        mileage = 0;
         this.maxThankCapacity = maxThankCapacity;
         this.gasConsumption = gasConsumption;
     }
@@ -21,14 +21,17 @@ public class Car {
     }
 
     public void fillGas(double gasToFill) {
-        gas = (gas + gasToFill) <= maxThankCapacity ? gas+gasToFill : maxThankCapacity;
+        gas = (gas + gasToFill) <= maxThankCapacity ? gas + gasToFill : maxThankCapacity;
     }
 
     public void move(double distance) {
-        mileage = gas * gasConsumption;
-        if (powerON && gas != 0) {
-            gas = distance <= mileage ? gas - (1 / gasConsumption * distance) : 0.0;
-            mileage += gas != 0 ? distance : mileage;
+        if (powerON && gas > 0) {
+            double maxDistanceToMove = gas * gasConsumption;
+            gas = distance <= maxDistanceToMove ? gas - (1 / gasConsumption * distance) : 0.0;
+            mileage += gas != 0 ? distance : maxDistanceToMove;
+            if (gas == 0) {
+                powerOff();
+            }
         } else {
             System.out.println("Turn on the car and fill the gas");
         }
