@@ -50,7 +50,7 @@ public class GuessTheMovie {
             if (movieTitle.charAt(i) == ' ') {
                 spaces++;
             } else {
-                movieTitleAsterisks[i] = '*';
+                movieTitleAsterisks[i] = '_';
             }
         }
         System.out.println(movieTitleAsterisks);
