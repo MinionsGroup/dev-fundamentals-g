@@ -53,12 +53,14 @@ public class Auto {
 
     public void move(double distance) {
         if (distance < maxDistance()) {
-            this.distance = distance;
+            this.distance += distance;
+            this.gas -= getGasConsume(distance);
         } else {
             this.distance = maxDistance();
         }
         this.gas -= this.distance / this.gasConsume;
     }
+
 
     public double getCapacity() {
         return capacity;
@@ -68,15 +70,15 @@ public class Auto {
         this.capacity = capacity;
     }
 
-    public double getGasConsume() {
-        return gasConsume;
+    public double getGasConsume(double distance) {
+        return distance / gasConsume;
     }
 
     public void setGasConsume(double gasConsume) {
         this.gasConsume = gasConsume;
     }
 
-    public double distanceTraveled() {
+    public double distanceTraveled(double distance) {
         return distance;
     }
 
