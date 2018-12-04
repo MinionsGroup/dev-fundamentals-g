@@ -8,7 +8,6 @@ public class GuessMovieGame {
     private String hiddenChosenMovie;
     private int lostPoints;
 
-
     public GuessMovieGame(List<String> moviesTitleList) {
         this.moviesTitleList = moviesTitleList;
         chosenMovie = "";
