@@ -24,9 +24,12 @@ public class Movie {
     public int getTrying() {
         return this.trying;
     }
+    public void setTrying(int number) {
+        this.trying = number;
+    }
 
     public String getRandomMovieName() {
-        return randomMovieName;
+        return randomMovieName.toLowerCase();
     }
 
     public List<String> getMoviesList() {

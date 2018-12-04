@@ -7,29 +7,49 @@ public class Main {
         Movie movie = new Movie();
 
         String movieName = movie.getRandomMovieName();
-        movieName = movieName.toLowerCase();
-        System.out.println(movieName);
+        String movieNameOfi = movieName;
 
+        System.out.println("The game start: \n");
         System.out.print(movie.replaceMovieName(movieName));
 
-        char [] hideMovieName = new char[movie.replaceMovieName(movieName).length()];
+        char [] hideMovieName = movie.replaceMovieName(movieName).toCharArray();
+        String movieActualName = "";
+        boolean verification;
 
         Scanner scanner = new Scanner(System.in);
-
-        while (movie.getTrying() >= 0) {
-            System.out.println("Enter a letter: ");
-
+        do {
+            System.out.println("\nEnter a letter: ");
             char letter = Character.toLowerCase(scanner.next().charAt(0));
+            verification = false;
+            for (int i = 0; i < movieName.length(); i++) {
+                if (movieName.charAt(i) == letter) {
+                    hideMovieName[i] = letter;
+                    System.out.println(String.valueOf(hideMovieName));
 
-            for (int index = 0; index < movieName.length(); index++) {
-                if (movieName.charAt(index) == letter) {
-                    hideMovieName[index] = letter;
-                    System.out.println(hideMovieName);
+                    char[] nameChars = movieName.toCharArray();
+                    nameChars[i] = '_';
+                    movieName = String.valueOf(nameChars);
+
+                    movieActualName = String.valueOf(hideMovieName);
+
+                    verification = true;
                     break;
                 }
             }
+            if (!verification) {
+                System.out.println("Letter not in movie name");
+                movie.subtractTrying();
+                System.out.println("Tryings: " + movie.getTrying());
+            }
+            if (movieActualName.equals(movieNameOfi)) {
+                movie.setTrying(-1);
+            }
+        } while (movie.getTrying() > 0);
 
-            movie.subtractTrying();
+        if (movie.getTrying() == 0) {
+            System.out.println("You lost the game");
+        } else {
+            System.out.println("You win game");
         }
     }
 }
