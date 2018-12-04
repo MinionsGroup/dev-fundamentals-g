@@ -7,11 +7,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-    List<String> multimedia = new ArrayList<>();
-    String movie;
-    String hideMovie;
-    StringBuilder wrongWords;
-    int contWrongWords;
+    private List<String> multimedia = new ArrayList<>();
+    private String movie;
+    private String hideMovie;
+    private StringBuilder wrongWords;
+    private int contWrongWords;
 
     public Game() {
         this.movie = "";
@@ -19,6 +19,7 @@ public class Game {
         wrongWords = new StringBuilder();
         contWrongWords = 0;
     }
+
     public void readFile() throws FileNotFoundException {
         File file = new File("ariel-gonzales\\lesson-3\\movies\\movies");
         Scanner scanner = new Scanner(file);
@@ -27,21 +28,21 @@ public class Game {
         }
     }
 
-    public String randomMovie() {
+    private String randomMovie() {
         return multimedia.get(new Random().nextInt(multimedia.size()));
     }
 
-    public String hideMovie(String movie) {
+    private String hideMovie(String movie) {
         return movie.replaceAll("[a-z]", "_");
     }
 
-    public void selectRandomMovie() {
+    private void selectRandomMovie() {
 
         this.movie = randomMovie();
         this.hideMovie = hideMovie(this.movie);
     }
 
-    public String replaceLetters(char letter) {
+    private String replaceLetters(char letter) {
         StringBuilder mov = new StringBuilder(this.hideMovie);
         doesNotContains(letter);
         for (int i = 0; i < this.movie.length(); i++) {
@@ -70,7 +71,7 @@ public class Game {
 
     }
 
-    public void doesNotContains(char letter) {
+    private void doesNotContains(char letter) {
 
         if (!(this.movie.indexOf(letter) > -1)) {
             this.wrongWords.append(letter);
