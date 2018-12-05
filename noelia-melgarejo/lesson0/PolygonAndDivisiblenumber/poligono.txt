@@ -1,0 +1,54 @@
+Ejercicio 1 
+Modelo Matematico 
+
+p es divisible por 4
+q is not divisible por 100
+r is divisible por 400
+
+
+CalcularEsDivisible (int anio, int number )	        anio  number
+
+if (anio %number = =0  )                                             0
+return true
+else false
+    
+
+
+	p  = CalcularEsDivisible  (int anio, 4) 
+	q =  ! CalcularEsDivisible (int anio, 100)
+	r  =  CalcularEsDivisible (int anio, 400) 
+	if (P && !q && r)
+	show “Es anio bisiesto”
+	else
+	show”No es anio bisiesto”
+Ejercicio 2 
+Area de un poligono regular 
+
+ s
+
+Entrada : longitd del lado del poligono : S
+numero de lados : n
+
+
+Modelo Matemático 
+	Calcular perímetro  P = S * n
+	Determinar el valor del apotema a = S/(2 tan (180/n))
+	Calcular el Area A = (P* a)/2
+Algoritmo 
+	Leer int s , n  (S = longitud del lado del poligono y n numero de Lados)
+	Calcular el perimetro: int p = S*n
+	Calcular el valor del apotema double a = S/(2 tan (180/n))
+	Calcular el Area  double A  = (P* a)/2
+
+
+
+
+
+
+
+
+
+
+
+
+
