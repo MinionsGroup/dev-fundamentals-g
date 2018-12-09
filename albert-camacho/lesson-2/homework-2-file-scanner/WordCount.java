@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class WordCount {
     public static void main(String args []){
         try {
-            File file = new File("albert-camacho/lesson-2/homework-2-file-scanner/ibm_system.txt");
+            File file = new File("albert-camacho/lesson_2/homework-2-file-scanner/ibm_system.txt");
             Scanner scanner = new Scanner(file);
 
             int words = 0;
