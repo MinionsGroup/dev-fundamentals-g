@@ -1,0 +1,23 @@
+1. Hallar x, y getXandYforP3OfTriangleRectangle(P1,P2)
+tangente 45=1
+d(P2-P)^2= (x2-x)^2 + (y - y2)^2
+  
+d(P-P1)=  (x-x1)^2 + (y1-y)^2
+ecuacion_segundo_grado_x = (x2-x)^2 
+ecuacion_segundo_grado_y = (y - y2)^2
+
+* Hallar a,b,c for X  abcForXPointForP3(ecuacion_segundo_grado_x)
+* Hallar a,b,c for y  abcForYPointForP3(ecuacion_segundo_grado_y)
+
+* xPointForP3(a,b,c)
+x = (-b+raizCuadrada(b^2-4ac))/2a
+* yPointForP3(a,b,c)  
+y = (-b+raizCuadrada(b^2-4ac))/2a
+
+* point3(x,y)  
+P3 = new Point(x,y)
+
+2. Hallar el area triangle areaTriangle(P1,P2,P3)
+area = |((x1y2 - x2y1)+(x2-x1)y3+(y1-y2)x3)|/2
+3. Hallar el area rectangulo areaRectangle(areaTriangle)
+areaRectangle= 2(areaTriangle)
