@@ -1,0 +1,114 @@
+You are guessing: _____ ______ ___
+You have guessed (0) wrong letters: 
+Guess a letter: 
+a
+You are guessing: __a__ __a___ ___
+You have guessed (0) wrong letters: 
+Guess a letter: 
+r
+You are guessing: r_a__ __a__r ___
+You have guessed (0) wrong letters: 
+Guess a letter: 
+e
+You are guessing: rea__ __a_er __e
+You have guessed (0) wrong letters: 
+Guess a letter: 
+d
+You are guessing: read_ __a_er __e
+You have guessed (0) wrong letters: 
+Guess a letter: 
+y
+You are guessing: ready __ayer __e
+You have guessed (0) wrong letters: 
+Guess a letter: 
+p
+You are guessing: ready p_ayer __e
+You have guessed (0) wrong letters: 
+Guess a letter: 
+l
+You are guessing: ready player __e
+You have guessed (0) wrong letters: 
+Guess a letter: 
+n
+You are guessing: ready player _ne
+You have guessed (0) wrong letters: 
+Guess a letter: 
+O
+You win!!!!
+You are guessing: ______ ___ ______ _______
+You have guessed (0) wrong letters: 
+Guess a letter: 
+a
+You are guessing: _a___a ___ ______ _a___a_
+You have guessed (0) wrong letters: 
+Guess a letter: 
+N
+You are guessing: na_n_a ___ ___n__ _a___an
+You have guessed (0) wrong letters: 
+Guess a letter: 
+r
+You are guessing: narn_a ___ _r_n__ _a___an
+You have guessed (0) wrong letters: 
+Guess a letter: 
+i
+You are guessing: narnia ___ _rin__ _a__ian
+You have guessed (0) wrong letters: 
+Guess a letter: 
+b
+You are guessing: narnia ___ _rin__ _a__ian
+You have guessed (1) wrong letters:  b
+Guess a letter: 
+k
+You are guessing: narnia ___ _rin__ _a__ian
+You have guessed (2) wrong letters:  b k
+Guess a letter: 
+ñ
+You are guessing: narnia ___ _rin__ _a__ian
+You have guessed (3) wrong letters:  b k ñ
+Guess a letter: 
+r
+You are guessing: narnia ___ _rin__ _a__ian
+You have guessed (3) wrong letters:  b k ñ
+Guess a letter: 
+s
+You are guessing: narnia ___ _rin__ _as_ian
+You have guessed (3) wrong letters:  b k ñ
+Guess a letter: 
+s
+You are guessing: narnia ___ _rin__ _as_ian
+You have guessed (3) wrong letters:  b k ñ
+Guess a letter: 
+n
+You are guessing: narnia ___ _rin__ _as_ian
+You have guessed (3) wrong letters:  b k ñ
+Guess a letter: 
+h
+You are guessing: narnia _h_ _rin__ _as_ian
+You have guessed (3) wrong letters:  b k ñ
+Guess a letter: 
+w
+You are guessing: narnia _h_ _rin__ _as_ian
+You have guessed (4) wrong letters:  b k ñ w
+Guess a letter: 
+v
+You are guessing: narnia _h_ _rin__ _as_ian
+You have guessed (5) wrong letters:  b k ñ w v
+Guess a letter: 
+1
+You are guessing: narnia _h_ _rin__ _as_ian
+You have guessed (6) wrong letters:  b k ñ w v 1
+Guess a letter: 
+m
+You are guessing: narnia _h_ _rin__ _as_ian
+You have guessed (7) wrong letters:  b k ñ w v 1 m
+Guess a letter: 
+z
+You are guessing: narnia _h_ _rin__ _as_ian
+You have guessed (8) wrong letters:  b k ñ w v 1 m z
+Guess a letter: 
+v
+You are guessing: narnia _h_ _rin__ _as_ian
+You have guessed (9) wrong letters:  b k ñ w v 1 m z v
+Guess a letter: 
+b
+You lose! Nice try
