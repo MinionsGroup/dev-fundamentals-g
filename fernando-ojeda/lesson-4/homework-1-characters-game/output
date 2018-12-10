@@ -1,0 +1,218 @@
+Example1:
+Battle
+characters.Warriors , health = 300 , mana = 0
+ vs
+characters.Priests , health = 125 , mana = 200
+
+Battle
+characters.Priests , health = 5 , mana = 200
+ vs
+characters.Warriors , health = 300 , mana = 0
+
+Battle
+characters.Warriors , health = 300 , mana = 0
+ vs
+characters.Priests , health = 155 , mana = 100
+
+Battle
+characters.Warriors , health = 300 , mana = 0
+ vs
+characters.Priests , health = 125 , mana = 200
+
+Battle
+characters.Mages , health = 100 , mana = 300
+ vs
+characters.Priests , health = 35 , mana = 100
+
+Battle
+characters.Mages , health = 100 , mana = 300
+ vs
+characters.Priests , health = 5 , mana = 200
+
+Battle
+characters.Warriors , health = 300 , mana = 0
+ vs
+characters.Mages , health = 100 , mana = 200
+
+Battle
+characters.Warriors , health = 300 , mana = 0
+ vs
+characters.Priests , health = 125 , mana = 200
+
+Battle
+characters.Warriors , health = 300 , mana = 0
+ vs
+characters.Priests , health = 5 , mana = 200
+
+Battle
+characters.Warriors , health = 300 , mana = 0
+ vs
+characters.Warriors , health = 300 , mana = 0
+
+Battle
+characters.Warriors , health = 300 , mana = 0
+ vs
+characters.Warriors , health = 180 , mana = 0
+
+Battle
+characters.Warriors , health = 60 , mana = 0
+ vs
+characters.Mages , health = 100 , mana = 200
+
+Battle
+characters.Warriors , health = 60 , mana = 0
+ vs
+characters.Warriors , health = 300 , mana = 0
+
+Battle
+characters.Warriors , health = 180 , mana = 0
+ vs
+characters.Warriors , health = 300 , mana = 0
+
+Battle
+characters.Warriors , health = 180 , mana = 0
+ vs
+characters.Warriors , health = 60 , mana = 0
+
+Battle
+characters.Warriors , health = 180 , mana = 0
+ vs
+characters.Mages , health = 100 , mana = 300
+
+Battle
+characters.Warriors , health = 180 , mana = 0
+ vs
+characters.Warriors , health = 180 , mana = 0
+
+Battle
+characters.Warriors , health = 60 , mana = 0
+ vs
+characters.Warriors , health = 180 , mana = 0
+
+Battle
+characters.Warriors , health = 60 , mana = 0
+ vs
+characters.Warriors , health = 60 , mana = 0
+
+The winner is: characters.Warriors
+ with 60 of health and 0 of mana
+
+Example2:
+Battle
+characters.Warriors , health = 300 , mana = 0
+ vs
+characters.Mages , health = 100 , mana = 300
+
+Battle
+characters.Priests , health = 125 , mana = 200
+ vs
+characters.Mages , health = 100 , mana = 300
+
+Battle
+characters.Priests , health = 125 , mana = 200
+ vs
+characters.Warriors , health = 300 , mana = 0
+
+Battle
+characters.Warriors , health = 300 , mana = 0
+ vs
+characters.Warriors , health = 300 , mana = 0
+
+Battle
+characters.Warriors , health = 190 , mana = 0
+ vs
+characters.Priests , health = 125 , mana = 200
+
+Battle
+characters.Priests , health = 5 , mana = 200
+ vs
+characters.Priests , health = 135 , mana = 200
+
+Battle
+characters.Warriors , health = 190 , mana = 0
+ vs
+characters.Warriors , health = 300 , mana = 0
+
+Battle
+characters.Warriors , health = 180 , mana = 0
+ vs
+characters.Warriors , health = 190 , mana = 0
+
+Battle
+characters.Priests , health = 135 , mana = 200
+ vs
+characters.Warriors , health = 180 , mana = 0
+
+Battle
+characters.Warriors , health = 70 , mana = 0
+ vs
+characters.Priests , health = 145 , mana = 200
+
+Battle
+characters.Priests , health = 25 , mana = 200
+ vs
+characters.Warriors , health = 180 , mana = 0
+
+Battle
+characters.Priests , health = 155 , mana = 100
+ vs
+characters.Warriors , health = 180 , mana = 0
+
+Battle
+characters.Mages , health = 100 , mana = 300
+ vs
+characters.Priests , health = 165 , mana = 100
+
+Battle
+characters.Warriors , health = 70 , mana = 0
+ vs
+characters.Priests , health = 175 , mana = 100
+
+Battle
+characters.Priests , health = 135 , mana = 200
+ vs
+characters.Mages , health = 100 , mana = 200
+
+Battle
+characters.Warriors , health = 70 , mana = 0
+ vs
+characters.Warriors , health = 70 , mana = 0
+
+Battle
+characters.Priests , health = 55 , mana = 100
+ vs
+characters.Warriors , health = 70 , mana = 0
+
+Battle
+characters.Priests , health = 65 , mana = 100
+ vs
+characters.Priests , health = 145 , mana = 200
+
+Battle
+characters.Priests , health = 15 , mana = 100
+ vs
+characters.Priests , health = 15 , mana = 100
+
+Battle
+characters.Priests , health = 165 , mana = 0
+ vs
+characters.Priests , health = 165 , mana = 0
+
+Battle
+characters.Priests , health = 75 , mana = 100
+ vs
+characters.Warriors , health = 70 , mana = 0
+
+Battle
+characters.Priests , health = 85 , mana = 100
+ vs
+characters.Priests , health = 85 , mana = 100
+
+Battle
+characters.Priests , health = 65 , mana = 0
+ vs
+characters.Priests , health = 35 , mana = 200
+
+The winner is: characters.Priests
+ with 75 of health and 0 of mana
+

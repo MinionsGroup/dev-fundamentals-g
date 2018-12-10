@@ -37,14 +37,15 @@ public class Main {
             int indexCharacter2 = (int) ((Math.random()*(characters.size())));
             Character character = characters.get(indexCharacter1);
             Character character1 = characters.get(indexCharacter2);
+            showBattle(character, character1);
             healsCharacter(character1);
             attackCharacter(character, character1);
             removeCharacter(characters, indexCharacter2, character1);
         }
 
         for (Character character: characters) {
-            System.out.println(character.getClass().getName());
-            System.out.println(character.getHealth());
+            System.out.println("The winner is: " + character.getClass().getName() + "\n with " + character.getHealth()
+                    + " of health and " + character.getMana() + " of mana");
         }
     }
 
@@ -71,5 +72,11 @@ public class Main {
         }else {
             character.attack(character1);
         }
+    }
+
+    private static void showBattle(Character character, Character character1) {
+        System.out.println("Battle\n" + character.getClass().getName() + " , health = " + character.getHealth()
+                + " , mana = " + character.getMana() + "\n vs \n" + character1.getClass().getName() + " , health = "
+                + character1.getHealth() + " , mana = " + character1.getMana() + "\n");
     }
 }
