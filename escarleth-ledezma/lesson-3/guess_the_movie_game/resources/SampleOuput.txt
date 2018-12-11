@@ -1,0 +1,42 @@
+***********Welcome,Guess The Movie***********
+
+You are guessing: ___ ___
+You have guessed (0) wrong letters:
+Guess a letter:
+a
+
+You are guessing: a__ _a_
+You have guessed (0) wrong letters:
+Guess a letter:
+w
+
+You are guessing: a__ _a_
+You have guessed (1) wrong letters: w
+Guess a letter:
+n
+
+You are guessing: an_ _an
+You have guessed (1) wrong letters: w
+Guess a letter:
+t
+
+You are guessing: ant _an
+You have guessed (1) wrong letters: w
+Guess a letter:
+o
+
+You are guessing: ant _an
+You have guessed (2) wrong letters: w o
+Guess a letter:
+e
+
+You are guessing: ant _an
+You have guessed (3) wrong letters: w o e
+Guess a letter:
+m
+
+You are guessing: ant man
+You have guessed (3) wrong letters: w o e
+Guess a letter:
+Congratulations,You WIN!!!
+You have guessed ant man correctly
