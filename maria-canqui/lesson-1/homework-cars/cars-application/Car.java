@@ -7,12 +7,14 @@ public class Car {
 
     /**
      * This method changes the Car PowerOn status
-     * @param distance distance to travel in km
-     * @param gasolineConsume gasoline cosumed per km
+     * @param mileage distance to travel in km
+     * @param gasoline initial gasoline
+     * @param maxGasoline
+     * @param gasolineConsume gasoline consume
      */
-    Car(double distance, double gasoline, double maxGasoline, double gasolineConsume) {
+    Car(double mileage, double gasoline, double maxGasoline, double gasolineConsume) {
         this.isPowerOn = false;
-        this.distance = distance;
+        this.mileage = mileage;
         this.gasoline = gasoline;
         this.gasolineConsume = gasolineConsume;
         this.maxGasoline = maxGasoline;
@@ -74,9 +76,10 @@ public class Car {
     /**
      * This method set the gasoline that the car will need to move
      */
-    public int moveCar() {
+    public int moveCar(double distance) {
         setPowerOn(true);
-        if (getTheCarNeedGasoline()) { 
+        if (getTheCarNeedGasoline()) {
+            this.mileage += distance;
             System.out.println("Initial gasoline: " + this.gasoline);
             this.gasoline -= getGasolineRequired();
             System.out.println("Actual gasoline: " + this.gasoline);
