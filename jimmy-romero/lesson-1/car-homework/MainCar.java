@@ -1,26 +1,35 @@
+import java.io.FileNotFoundException;
+
 public class MainCar {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Car chapatin = new Car();
         Car lancer = new Car(60, 0.07);
         Car supra = new Car(65, 0.04);
         Car civic = new Car(55, 0.05);
-        lancer.fillGas(50);
-        supra.fillGas(45);
-        civic.fillGas(50);
+
+        DataManager data = new DataManager();
+        double amountOfGas = data.loadGas();
+
+        lancer.fillGas(amountOfGas );
+        supra.fillGas(amountOfGas );
+        civic.fillGas(amountOfGas );
+
         chapatin.powerOff();
         lancer.powerOn();
         supra.powerOn();
         civic.powerOn();
-        chapatin.moveDistance(50);
+
+        double distance = data.carDistance();
+        chapatin.moveDistance(distance);
         System.out.println("-- Chapatin --");
         chapatin.displayInformation();
-        lancer.moveDistance(50);
+        lancer.moveDistance(distance);
         System.out.println("-- Lancer --");
         lancer.displayInformation();
-        supra.moveDistance(50);
+        supra.moveDistance(distance);
         System.out.println("-- Supra --");
         supra.displayInformation();
-        civic.moveDistance(50);
+        civic.moveDistance(distance);
         System.out.println("-- Civic --");
         civic.displayInformation();
     }
