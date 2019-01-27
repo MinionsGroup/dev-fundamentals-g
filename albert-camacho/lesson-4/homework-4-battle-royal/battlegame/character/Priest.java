@@ -11,7 +11,7 @@ public class Priest extends Character implements IHeal {
 
     @Override
     public void attack(Character target) {
-        super.attack(target);
+        target.setHealth(target.getHealth() - this.damage);
 
         // Priest heals himself by restoring the 10%
         int health = getHealth() + (getDamage() / 10);

@@ -3,9 +3,9 @@ package battlegame;
 import battlegame.skill.IAttack;
 
 public abstract class Character implements IAttack {
-    private int health;
-    private int mana;
-    private int damage;
+    protected int health;
+    protected int mana;
+    protected int damage;
 
     protected Character(int health, int mana, int damage) {
         this.health = health;
@@ -33,12 +33,4 @@ public abstract class Character implements IAttack {
         return damage;
     }
 
-    public void setDamage(int damage) {
-        this.damage = damage;
-    }
-
-    @Override
-    public void attack(Character target) {
-        target.health -= this.damage;
-    }
 }
