@@ -1,3 +1,3 @@
 public interface IHeal {
-    public void heal(Character target);
+    void heal(Character target);
 }
