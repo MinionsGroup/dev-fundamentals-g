@@ -1,0 +1,46 @@
+Modelo Matematico 
+
+
+                                                         C(X2, Y2)
+
+
+
+
+                          A(X1, y1)             B(X2,Y1)
+
+
+
+
+Dado los puntos   A(X1, y1)  y  C(X2, Y2) hallar el area del rectangulo 
+ABC es un triangulo rectangulo por lo tanto el punto B es (X2, Y1)
+Para hallar el Area del rectangulo realizamos el siguiente proceso:
+
+	La distancia AB, La distancia expresada en valor absoluto
+	dAB = v(?(x2 - x1)?^2 ?+ (Y1 -Y1)?^2 )
+	dAB = v((?X2 -x1)?^2 )
+	dAB = X2-X1
+	La distancia entre BC, La distancia expresada en valor absoluto
+	dBC = v(?(x2-x2)?^2+(?Y1-Y2)?^2 )
+	dBC = v(?(Y1 - Y2)?^2 )
+	dBC = Y1-Y2 
+
+	Calcular Area Rectangulo  (Valor absoluto)
+	Area = dAB * dBC
+	?(X2-X1)*(Y1-Y2)?
+
+Algoritmo 
+
+leer variables doubles : x1, x2, y1, y2
+	Calcular distancia AB (Valor absoluto)
+	dAB = Calcular raiz de  ?(x2 - x1)?^2 ?+ (Y1 -Y1)?^2  (Aplicando formula de distancia )
+	dAB = ?Calcular raiz de   (x2 - x1)?^2 
+	dAB =  ?  (x2 - x1)?^ 
+	dAB = ?X2-X1?
+	Calcular distancia BC (Valor absoluto)
+	dBC = Calcular raiz de?(x2-x2)?^2+(?Y1-Y2)?^2    (Aplicando formula de distancia )
+	dBC = Calcular raiz de ?(Y1 - Y2)?^2  
+	dBC =  ?(Y1 - Y2)?^  
+	dBC = ?y1-y2?
+	Calcular Area Rectangulo
+	Double Area = dAB * dBC (Paso 5 y Paso 10)
+	Area = ?(X2-X1)*(Y1-Y2)?
