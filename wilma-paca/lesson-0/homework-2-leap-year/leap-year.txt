@@ -1,0 +1,29 @@
+# Determinar si el año es biciesto
+1. get true/false with divideYearBetween4hasFraction0(year)
+   double result = year divide 4
+   fraction = result.split(.)
+   if fraction != 0
+                then false
+   else
+                                true
+                                
+2. get true/false with divideYearBetween100hasFraction0(year)
+   double result = year divide 100
+   fraction = result.split(.)
+   if fraction != 0
+                then false
+   else
+                                true
+                                
+3. get true/false with divideYearBetween400hasFraction0(year)
+                double result = year divide 400
+   fraction = result.split(.)
+   if fraction != 0
+                then false
+   else
+                                true
+4. leap-year(year)
+                if(divideYearBetween4hasFraction0(year) == true && divideYearBetween100hasFraction0(year) == true && divideYearBetween400hasFraction0(year) == true)
+                then 'leap-year:'+year
+                else
+                year+'is not leap-year'
