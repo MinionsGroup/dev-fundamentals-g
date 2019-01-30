@@ -2,9 +2,9 @@ package lesson_1.exercise_1_contacts.homework_1_car;
 
 public class MainClass {
     public static void main(String[] args) {
-        Car celica = new Car(30, 100, 200);
-        Car mustang = new Car(50, 200, 150);
-        Car golf = new Car(70, 150, 250);
+        Car celica = new Car(100, 200);
+        Car mustang = new Car(200, 150);
+        Car golf = new Car(150, 250);
         celica.powerOn();
         mustang.powerOn();
         golf.powerOn();

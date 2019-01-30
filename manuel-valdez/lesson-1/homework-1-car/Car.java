@@ -4,12 +4,10 @@ public class Car {
     private double gas;
     private double distance;
     private boolean isPowerOn;
-    private double maxGas;
-    private double batteryChargeLevel;
+    private double maxGas;    
     private double distanceMoved;
 
-    public Car(double batteryLevel, double maxGas, double distance) {
-        this.batteryChargeLevel = batteryLevel;
+    public Car(double maxGas, double distance) {
         this.isPowerOn = false;
         this.maxGas = maxGas;
         this.gas = 0;
@@ -58,10 +56,7 @@ public class Car {
     }
 
     public void powerOn() {
-        if (isBatteryCharged()) {
-            this.isPowerOn = true;
-            batteryChargeLevel-=10;
-        }
+        this.isPowerOn = true;
     }
 
     public void powerOff() {
@@ -104,9 +99,5 @@ public class Car {
 
     private boolean canMove(double distance) {
         return this.gas > 0;
-    }
-
-    private boolean isBatteryCharged() {
-        return batteryChargeLevel > 0;
     }
 }
