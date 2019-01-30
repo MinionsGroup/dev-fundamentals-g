@@ -4,13 +4,13 @@ public class MainClass {
     public static void main(String[] args) {
 		DataLoader data = new DataLoader();
 		double distance = data.carDistance();		
-        Car celica = new Car(30, 100, distance);
+        Car celica = new Car(100, distance);
 		
-		distance = data.carDistance();		
-        Car mustang = new Car(50, 200, distance);
+		distance = data.carDistance();
+        Car mustang = new Car(200, distance);
 		
-		distance = data.carDistance();		
-        Car golf = new Car(70, 150, distance);
+		distance = data.carDistance();
+		Car golf = new Car(150, distance);
         
 		celica.powerOn();
         mustang.powerOn();
